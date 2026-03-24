@@ -24,7 +24,7 @@ const supporters = [
 
 export default function PartnersSection() {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 bg-rose-orion">
+    <section className="py-16 md:py-24 px-4 md:px-6 bg-rose-orion grain-overlay">
       <div className="max-w-7xl mx-auto">
         <h3 className="text-center font-[var(--font-heading)] text-xs uppercase tracking-[0.3em] text-bleu-orion font-bold mb-8 md:mb-12">
           Nos partenaires

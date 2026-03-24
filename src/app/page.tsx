@@ -244,65 +244,71 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 4 activities — clean 2x2 on mobile, scattered on desktop */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-12 md:gap-0">
-            <div className="md:col-span-4 relative group">
-              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-bleu-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 -left-4 z-0 select-none">
-                FOOD
-              </h3>
-              <div className="relative z-10">
-                <PiHamburger className="w-7 h-7 md:w-10 md:h-10 text-rose-orion/50 mb-2" />
-                <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
-                  Gastronomie
-                </h4>
-                <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
-                  3 stands de nourriture
-                </p>
+          {/* 4 activities — 2x2 on mobile, alternating left/right on desktop */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:block md:space-y-20 lg:space-y-24">
+            {/* Row 1: Gastronomie left, Désaltération right */}
+            <div className="contents md:flex md:justify-between md:items-start md:gap-16">
+              <div className="relative group md:w-2/5">
+                <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-bleu-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 -left-4 z-0 select-none">
+                  FOOD
+                </h3>
+                <div className="relative z-10">
+                  <PiHamburger className="w-7 h-7 md:w-10 md:h-10 text-rose-orion/50 mb-2" />
+                  <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
+                    Gastronomie
+                  </h4>
+                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                    3 stands de nourriture
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative group md:w-2/5 md:text-right md:mt-12">
+                <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-rose-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 right-0 z-0 select-none">
+                  BARS
+                </h3>
+                <div className="relative z-10">
+                  <PiBeerStein className="w-7 h-7 md:w-10 md:h-10 text-bleu-orion/30 mb-2 md:ml-auto" />
+                  <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
+                    Désaltération
+                  </h4>
+                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                    2 bars + Biergarten
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="md:col-span-4 md:col-start-5 relative group md:mt-24 lg:mt-32">
-              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-rose-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 right-0 z-0 select-none">
-                BARS
-              </h3>
-              <div className="relative z-10">
-                <PiBeerStein className="w-7 h-7 md:w-10 md:h-10 text-bleu-orion/30 mb-2" />
-                <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
-                  Désaltération
-                </h4>
-                <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
-                  2 bars + Biergarten
-                </p>
+            {/* Row 2: Artisanat right, Détente left */}
+            <div className="contents md:flex md:justify-between md:items-start md:gap-16 md:flex-row-reverse">
+              <div className="relative group md:w-2/5">
+                <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-bleu-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 -left-4 z-0 select-none">
+                  CRAFT
+                </h3>
+                <div className="relative z-10">
+                  <PiPaintBrush className="w-7 h-7 md:w-10 md:h-10 text-rose-orion/50 mb-2" />
+                  <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
+                    Artisanat
+                  </h4>
+                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                    3 stands de créateurs
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="md:col-span-4 md:col-start-9 relative group md:-mt-8">
-              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-bleu-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 -left-4 z-0 select-none">
-                CRAFT
-              </h3>
-              <div className="relative z-10">
-                <PiPaintBrush className="w-7 h-7 md:w-10 md:h-10 text-rose-orion/50 mb-2" />
-                <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
-                  Artisanat
-                </h4>
-                <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
-                  3 stands de créateurs
-                </p>
-              </div>
-            </div>
-
-            <div className="md:col-span-4 md:col-start-2 relative group md:mt-16 lg:mt-20">
-              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-rose-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 right-0 z-0 select-none">
-                CHILL
-              </h3>
-              <div className="relative z-10">
-                <PiSunHorizon className="w-7 h-7 md:w-10 md:h-10 text-bleu-orion/30 mb-2" />
-                <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
-                  Détente
-                </h4>
-                <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
-                  Pétanque + chill zones
-                </p>
+              <div className="relative group md:w-2/5 md:text-right md:mt-12">
+                <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-rose-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 right-0 z-0 select-none">
+                  CHILL
+                </h3>
+                <div className="relative z-10">
+                  <PiSunHorizon className="w-7 h-7 md:w-10 md:h-10 text-bleu-orion/30 mb-2 md:ml-auto" />
+                  <h4 className="font-[var(--font-heading)] text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
+                    Détente
+                  </h4>
+                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                    Pétanque + chill zones
+                  </p>
+                </div>
               </div>
             </div>
           </div>
