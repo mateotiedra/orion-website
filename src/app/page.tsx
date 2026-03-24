@@ -149,13 +149,21 @@ export default function Home() {
             )}
           </div>
 
+          {/* CTA to programmation */}
+          <Link
+            href="/programmation"
+            className="inline-block mt-6 md:mt-10 px-8 md:px-12 py-3 md:py-4 bg-rose-orion text-bleu-orion font-black uppercase tracking-widest text-xs md:text-sm tilted-btn hover:brightness-110 transition-all"
+          >
+            <span>Voir la programmation</span>
+          </Link>
+
           {/* Orion logo small at bottom */}
           <Image
             src="/images/logo/logo-blanc.svg"
             alt="Orion Festival"
             width={200}
             height={50}
-            className="mx-auto w-32 md:w-48 h-auto opacity-80"
+            className="mx-auto mt-8 md:mt-12 w-32 md:w-48 h-auto opacity-80"
           />
         </div>
       </section>
