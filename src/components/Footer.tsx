@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 const navLinks = [
   { href: "/festival", label: "Festival" },
@@ -37,16 +38,16 @@ export default function Footer() {
               className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/20 hover:bg-white hover:text-bleu-orion transition-all text-sm"
               aria-label="Instagram"
             >
-              IG
+              <FaInstagram className="w-5 h-5" />
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://tiktok.com/@orionfestival"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/20 hover:bg-white hover:text-bleu-orion transition-all text-sm"
+              className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/20 hover:bg-white hover:text-bleu-orion transition-all"
               aria-label="TikTok"
             >
-              TK
+              <FaTiktok className="w-5 h-5" />
             </a>
           </div>
         </div>
