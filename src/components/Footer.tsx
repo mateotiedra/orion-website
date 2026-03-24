@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 const navLinks = [
-  { href: "/festival", label: "Festival" },
+  { href: "/#festival", label: "Festival" },
   { href: "/programmation", label: "Programmation" },
   { href: "/association", label: "Association" },
   { href: "/partenaires", label: "Partenaires" },

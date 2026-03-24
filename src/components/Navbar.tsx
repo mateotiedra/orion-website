@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "/festival", label: "Festival" },
+  { href: "/#festival", label: "Festival" },
   { href: "/programmation", label: "Programmation" },
   { href: "/association", label: "Association" },
   { href: "/partenaires", label: "Partenaires" },

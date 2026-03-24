@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PartnersSection from "@/components/PartnersSection";
+import { PiHamburger, PiBeerStein, PiPaintBrush, PiSunHorizon } from "react-icons/pi";
 
 export default function Home() {
   return (
@@ -169,70 +170,141 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ FESTIVAL TEASER ============ */}
-      <section className="py-20 md:py-40 px-4 md:px-6 bg-cream relative grain-overlay">
+      {/* ============ FESTIVAL — L'ESPACE ORION ============ */}
+      <section id="festival" className="py-20 md:py-40 px-4 md:px-6 bg-cream relative grain-overlay">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
-            {/* Left column */}
-            <div className="md:col-span-5 md:pt-20">
-              <span className="font-[var(--font-heading)] uppercase tracking-widest text-rose-orion font-bold text-xs md:text-sm mb-4 md:mb-6 block">
-                Manifeste
-              </span>
-              <h2 className="font-[var(--font-heading)] text-5xl md:text-7xl lg:text-[9rem] font-black text-bleu-orion mb-8 md:mb-12 tracking-tighter leading-[0.85]">
-                L&apos;ESPACE{" "}
-                <br />
-                <span className="text-rose-orion">ORION</span>
-              </h2>
-              <p className="text-gray-600 text-lg md:text-xl lg:text-3xl leading-relaxed max-w-xl font-medium">
-                Le temps d&apos;un week-end, le Parc des Molliers se
-                métamorphose pour accueillir un festival de musique
-                d&apos;envergure, accessible à toutes et tous grâce à une
-                entrée à prix libre.
-              </p>
-              <p className="text-gray-500 text-base md:text-lg mt-6 max-w-xl leading-relaxed">
-                Du rap à l&apos;électro, en passant par la pop et le rock,
-                Orion met à l&apos;honneur la scène suisse. Notre
-                programmation, plus que variée, met en avant des jeunes
-                artistes émergents répartis sur deux univers.
-              </p>
-              <div className="mt-12 md:mt-20 h-[1px] w-full bg-gray-300/30" />
+
+          {/* Top row — Scène Live (left) + Scène DJ (right) */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-0 mb-16 md:mb-0">
+            {/* Scène Live — top left */}
+            <div className="md:col-span-5 relative group">
+              <h3 className="hidden md:block font-[var(--font-heading)] text-[8rem] lg:text-[12rem] font-black text-bleu-orion/8 uppercase tracking-tighter absolute -top-8 lg:-top-14 -left-4 z-0 select-none">
+                LIVE
+              </h3>
+              <div className="relative z-10">
+                <h4 className="font-[var(--font-heading)] text-3xl md:text-4xl lg:text-6xl font-black text-bleu-orion uppercase">
+                  Scène <br /> Live
+                </h4>
+                <p className="text-gray-500 text-xs md:text-sm mt-3 md:mt-4 font-bold uppercase tracking-widest">
+                  Pour l&apos;énergie des instruments et des voix
+                </p>
+              </div>
             </div>
 
-            {/* Right column — stages */}
-            <div className="md:col-span-5 md:col-start-8 relative">
-              <div className="relative space-y-20 md:space-y-40 lg:space-y-48">
-                {/* Scène Live */}
-                <div className="relative group">
-                  <h3 className="hidden md:block font-[var(--font-heading)] text-8xl lg:text-[14rem] font-black text-bleu-orion/10 uppercase tracking-tighter absolute -top-10 lg:-top-20 -left-10 z-0 select-none">
-                    LIVE
-                  </h3>
-                  <div className="relative z-10">
-                    <h4 className="font-[var(--font-heading)] text-3xl md:text-4xl lg:text-6xl font-black text-bleu-orion uppercase">
-                      Scène <br /> Live
-                    </h4>
-                    <p className="text-gray-500 text-xs md:text-sm mt-3 md:mt-4 font-bold uppercase tracking-widest">
-                      Pour l&apos;énergie des instruments et des voix
-                    </p>
-                  </div>
-                </div>
+            {/* Scène DJ — top right */}
+            <div className="md:col-span-5 md:col-start-8 relative group md:text-right md:mt-20">
+              <h3 className="hidden md:block font-[var(--font-heading)] text-[8rem] lg:text-[12rem] font-black text-rose-orion/8 uppercase tracking-tighter absolute -top-8 lg:-top-14 right-0 z-0 select-none">
+                BEATS
+              </h3>
+              <div className="relative z-10">
+                <h4 className="font-[var(--font-heading)] text-3xl md:text-4xl lg:text-6xl font-black text-rose-orion uppercase">
+                  Scène <br /> DJ
+                </h4>
+                <p className="text-gray-500 text-xs md:text-sm mt-3 md:mt-4 font-bold uppercase tracking-widest">
+                  Plus intimiste pour des sets immersifs et dansants
+                </p>
+              </div>
+            </div>
+          </div>
 
-                {/* Scène DJ */}
-                <div className="relative group md:pl-20">
-                  <h3 className="hidden md:block font-[var(--font-heading)] text-8xl lg:text-[14rem] font-black text-rose-orion/10 uppercase tracking-tighter absolute -top-10 lg:-top-20 right-0 z-0 select-none">
-                    BEATS
-                  </h3>
-                  <div className="relative z-10 md:text-left">
-                    <h4 className="font-[var(--font-heading)] text-3xl md:text-4xl lg:text-6xl font-black text-rose-orion uppercase">
-                      Scène <br /> DJ
-                    </h4>
-                    <p className="text-gray-500 text-xs md:text-sm mt-3 md:mt-4 font-bold uppercase tracking-widest">
-                      Plus intimiste pour des sets immersifs et dansants
-                    </p>
-                  </div>
+          {/* Centre — title + text */}
+          <div className="md:max-w-2xl md:mx-auto md:text-center md:py-20 lg:py-32 mb-16 md:mb-0">
+            <span className="font-[var(--font-heading)] uppercase tracking-widest text-rose-orion font-bold text-xs md:text-sm mb-4 md:mb-6 block">
+              Manifeste
+            </span>
+            <h2 className="font-[var(--font-heading)] text-5xl md:text-7xl lg:text-[8rem] font-black text-bleu-orion mb-8 md:mb-12 tracking-tighter leading-[0.85]">
+              L&apos;ESPACE{" "}
+              <span className="text-rose-orion">ORION</span>
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed font-medium">
+              Le temps d&apos;un week-end, le Parc des Molliers se
+              métamorphose pour accueillir un festival de musique
+              d&apos;envergure, accessible à toutes et tous grâce à une
+              entrée à prix libre. Du rap à l&apos;électro, en passant par
+              la pop et le rock, Orion met à l&apos;honneur la scène suisse.
+            </p>
+          </div>
+
+          {/* Bottom — 4 activities scattered around */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-0">
+            {/* Gastronomie — bottom left */}
+            <div className="md:col-span-4 relative group">
+              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-bleu-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 -left-4 z-0 select-none">
+                FOOD
+              </h3>
+              <div className="relative z-10 flex items-start gap-4">
+                <PiHamburger className="w-8 h-8 md:w-10 md:h-10 text-rose-orion/50 shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-[var(--font-heading)] text-2xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
+                    Gastronomie
+                  </h4>
+                  <p className="text-gray-500 text-xs md:text-sm mt-2 font-bold uppercase tracking-widest">
+                    3 stands de nourriture pour tous les goûts
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Désaltération — bottom centre-right, offset down */}
+            <div className="md:col-span-4 md:col-start-5 relative group md:mt-24 lg:mt-32">
+              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-rose-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 right-0 z-0 select-none">
+                BARS
+              </h3>
+              <div className="relative z-10 flex items-start gap-4">
+                <PiBeerStein className="w-8 h-8 md:w-10 md:h-10 text-bleu-orion/30 shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-[var(--font-heading)] text-2xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
+                    Désaltération
+                  </h4>
+                  <p className="text-gray-500 text-xs md:text-sm mt-2 font-bold uppercase tracking-widest">
+                    2 bars et un Biergarten pour se retrouver
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Artisanat — far right, offset up */}
+            <div className="md:col-span-4 md:col-start-9 relative group md:-mt-8">
+              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-bleu-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 -left-4 z-0 select-none">
+                CRAFT
+              </h3>
+              <div className="relative z-10 flex items-start gap-4">
+                <PiPaintBrush className="w-8 h-8 md:w-10 md:h-10 text-rose-orion/50 shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-[var(--font-heading)] text-2xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
+                    Artisanat
+                  </h4>
+                  <p className="text-gray-500 text-xs md:text-sm mt-2 font-bold uppercase tracking-widest">
+                    3 stands de créateurs locaux à découvrir
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Détente — bottom left-centre, offset down */}
+            <div className="md:col-span-4 md:col-start-2 relative group md:mt-16 lg:mt-20">
+              <h3 className="hidden md:block font-[var(--font-heading)] text-[7rem] lg:text-[10rem] font-black text-rose-orion/6 uppercase tracking-tighter absolute -top-6 lg:-top-12 right-0 z-0 select-none">
+                CHILL
+              </h3>
+              <div className="relative z-10 flex items-start gap-4">
+                <PiSunHorizon className="w-8 h-8 md:w-10 md:h-10 text-bleu-orion/30 shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-[var(--font-heading)] text-2xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
+                    Détente
+                  </h4>
+                  <p className="text-gray-500 text-xs md:text-sm mt-2 font-bold uppercase tracking-widest">
+                    2 terrains de pétanque et chill zones
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Closing line */}
+          <p className="mt-20 md:mt-32 text-center font-[var(--font-heading)] text-rose-orion text-lg md:text-2xl lg:text-3xl font-black uppercase tracking-wider">
+            Bref, Orion c&apos;est l&apos;événement à ne pas manquer de 2026&nbsp;!
+          </p>
+
         </div>
       </section>
 

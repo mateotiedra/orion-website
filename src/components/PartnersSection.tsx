@@ -37,7 +37,7 @@ export default function PartnersSection() {
               alt={p.alt}
               width={140}
               height={56}
-              className="h-14 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+              className="h-14 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 mix-blend-multiply"
             />
           ))}
         </div>
@@ -53,7 +53,7 @@ export default function PartnersSection() {
               alt={s.alt}
               width={140}
               height={56}
-              className="h-14 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+              className="h-14 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 mix-blend-multiply"
             />
           ))}
         </div>
