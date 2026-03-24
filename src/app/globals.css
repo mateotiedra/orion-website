@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bleu-orion: #015f9c;
+  --color-rose-orion: #E1B5BC;
+  --color-cream: #FFFFFF;
+  --color-cream-dark: #EFEEEA;
+  --font-heading: var(--font-space-grotesk);
+  --font-subtitle: var(--font-poppins);
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--color-cream);
+  color: #1b1c1a;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Nebula glow effects */
+.nebula-glow {
+  background: radial-gradient(
+    circle,
+    rgba(225, 181, 188, 0.45) 0%,
+    rgba(72, 108, 164, 0) 70%
+  );
+}
+
+.nebula-glow-blue {
+  background: radial-gradient(
+    circle,
+    rgba(72, 108, 164, 0.4) 0%,
+    rgba(72, 108, 164, 0) 70%
+  );
+}
+
+/* Grain/noise stipple texture overlay */
+.grain-overlay {
+  position: relative;
+  overflow: visible;
+}
+
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 50;
+  background-image: url("/images/decorations/stipple-noise.png");
+  background-repeat: repeat;
+  background-size: 1024px 1024px;
+}
+
+/* Cosmic blob decoration */
+.cosmic-blob {
+  background: linear-gradient(135deg, #015f9c 0%, #e1b5bc 50%, #e1b5bc 100%);
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+/* Tilted button style */
+.tilted-btn {
+  transform: skewX(-12deg);
+}
+
+.tilted-btn span {
+  transform: skewX(12deg);
+  display: inline-block;
+}
+
+/* Poster-style tight leading */
+.text-poster {
+  line-height: 0.85;
+}
+
+/* Star decoration base */
+.star-decoration {
+  position: absolute;
+  pointer-events: none;
+}
