@@ -3,11 +3,10 @@ import Image from "next/image";
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 const navLinks = [
-  { href: "/#festival", label: "Festival" },
   { href: "/programmation", label: "Programmation" },
   { href: "/association", label: "Association" },
-  { href: "/partenaires", label: "Partenaires" },
   { href: "/dons", label: "Dons" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
