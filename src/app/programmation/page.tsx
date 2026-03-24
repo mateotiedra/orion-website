@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Countdown from "@/components/Countdown";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -72,7 +73,7 @@ export default function ProgrammationPage() {
       <Navbar />
 
       {/* ============ HERO ============ */}
-      <section className="relative bg-bleu-orion pt-28 md:pt-36 pb-16 md:pb-24 px-4 md:px-6 grain-overlay text-center">
+      <section className="relative bg-bleu-orion min-h-screen px-4 md:px-6 grain-overlay text-center flex flex-col items-center justify-center">
         <Image
           src="/images/decorations/nebula-glow.png"
           alt=""
@@ -82,47 +83,62 @@ export default function ProgrammationPage() {
           aria-hidden="true"
           priority
         />
+        <Image
+          src="/images/decorations/iridescent-blob.png"
+          alt=""
+          width={600}
+          height={600}
+          className="absolute -bottom-20 -left-20 md:bottom-[10%] md:left-[5%] w-[50%] md:w-[30%] opacity-40 pointer-events-none mix-blend-screen"
+          aria-hidden="true"
+        />
         <div className="relative z-20 max-w-7xl mx-auto">
           <h1 className="font-[var(--font-heading)] font-black text-[10vw] md:text-[7vw] text-white uppercase tracking-tighter leading-[0.85] mb-4 md:mb-6">
             Programmation
           </h1>
-          <p className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold">
+          <p className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold mb-10 md:mb-16">
             18 - 19 SEPT &apos;26 · Bernex, Parc des Molliers
           </p>
+          <Countdown>
+            <p className="font-[var(--font-heading)] text-rose-orion text-lg md:text-2xl font-black uppercase tracking-wider">
+              Découvrez les artistes ci-dessous
+            </p>
+          </Countdown>
         </div>
       </section>
 
-      {/* ============ ARTIST GRID ============ */}
-      <section className="bg-bleu-orion py-12 md:py-20 px-4 md:px-6 grain-overlay">
-        <div className="max-w-7xl mx-auto relative z-20">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-            {artists.map((artist, i) => (
-              <div
-                key={artist.name}
-                className={`group ${offsets[i]} ${rotations[i]} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
-              >
-                <div className="aspect-[3/4] bg-gradient-to-br from-white/10 to-white/5 mb-3 md:mb-4 shadow-xl relative">
-                  <span className="absolute inset-0 flex items-center justify-center text-white/15 font-[var(--font-heading)] text-xl md:text-2xl font-black uppercase text-center px-4">
-                    {artist.name}
-                  </span>
-                </div>
-                <span
-                  className={`text-[10px] md:text-xs font-[var(--font-heading)] font-black uppercase tracking-[0.2em] inline-block tilted-btn px-2 py-1 mb-1 md:mb-2 ${
-                    artist.isLive
-                      ? "text-rose-orion bg-white/10"
-                      : "text-white/60 bg-white/10"
-                  }`}
+      {/* ============ ARTIST GRID — only visible after countdown ============ */}
+      <Countdown showTimer={false}>
+        <section className="bg-bleu-orion py-12 md:py-20 px-4 md:px-6 grain-overlay">
+          <div className="max-w-7xl mx-auto relative z-20">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+              {artists.map((artist, i) => (
+                <div
+                  key={artist.name}
+                  className={`group ${offsets[i]} ${rotations[i]} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
                 >
-                  <span>{artist.stage}</span>
-                </span>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-[var(--font-heading)] font-black text-white uppercase leading-tight">
-                  {artist.name}
-                </h2>
-              </div>
-            ))}
+                  <div className="aspect-[3/4] bg-gradient-to-br from-white/10 to-white/5 mb-3 md:mb-4 shadow-xl relative">
+                    <span className="absolute inset-0 flex items-center justify-center text-white/15 font-[var(--font-heading)] text-xl md:text-2xl font-black uppercase text-center px-4">
+                      {artist.name}
+                    </span>
+                  </div>
+                  <span
+                    className={`text-[10px] md:text-xs font-[var(--font-heading)] font-black uppercase tracking-[0.2em] inline-block tilted-btn px-2 py-1 mb-1 md:mb-2 ${
+                      artist.isLive
+                        ? "text-rose-orion bg-white/10"
+                        : "text-white/60 bg-white/10"
+                    }`}
+                  >
+                    <span>{artist.stage}</span>
+                  </span>
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-[var(--font-heading)] font-black text-white uppercase leading-tight">
+                    {artist.name}
+                  </h2>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Countdown>
 
       <Footer />
     </>

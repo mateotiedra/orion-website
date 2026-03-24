@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PartnersSection from "@/components/PartnersSection";
+import Countdown from "@/components/Countdown";
 import { PiHamburger, PiBeerStein, PiPaintBrush, PiSunHorizon } from "react-icons/pi";
 
 export default function Home() {
@@ -88,76 +89,78 @@ export default function Home() {
           />
         </div>
 
-        {/* Bottom — Lineup text hierarchy (poster style) */}
+        {/* Bottom — Lineup or Countdown */}
         <div className="relative z-20 pb-8 md:pb-12 text-center">
-          {/* Headliners */}
-          <div className="flex flex-wrap items-center justify-center gap-x-4 md:gap-x-8 mb-2 md:mb-3">
-            <span className="font-[var(--font-heading)] text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
-              Liv Del Estal
-            </span>
-            <Image src="/images/logo/mono-blanc-etoile.svg" alt="" width={40} height={40} className="w-6 h-6 md:w-8 md:h-8 hidden md:block" aria-hidden="true" />
-            <span className="font-[var(--font-heading)] text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
-              A6el
-            </span>
-          </div>
-
-          {/* Secondary */}
-          <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-4 mb-2 md:mb-3">
-            {["Stela", "Nore6el", "Beka", "Mia Oud"].map((name, i) => (
-              <span key={name} className="flex items-center gap-2 md:gap-4">
-                <span className="font-[var(--font-heading)] text-rose-orion text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-tight">
-                  {name}
-                </span>
-                {i < 3 && (
-                  <span className="text-rose-orion/50 text-lg md:text-2xl font-light">
-                    &middot;
-                  </span>
-                )}
+          <Countdown>
+            {/* Headliners */}
+            <div className="flex flex-wrap items-center justify-center gap-x-4 md:gap-x-8 mb-2 md:mb-3">
+              <span className="font-[var(--font-heading)] text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
+                Liv Del Estal
               </span>
-            ))}
-          </div>
+              <Image src="/images/logo/mono-blanc-etoile.svg" alt="" width={40} height={40} className="w-6 h-6 md:w-8 md:h-8 hidden md:block" aria-hidden="true" />
+              <span className="font-[var(--font-heading)] text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
+                A6el
+              </span>
+            </div>
 
-          {/* Supporting */}
-          <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 mb-2 md:mb-3">
-            {["Projet Wipeout", "Mucho", "Halusk", "Habiboo", "Yuri"].map(
-              (name, i) => (
-                <span key={name} className="flex items-center gap-2 md:gap-3">
-                  <span className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
+            {/* Secondary */}
+            <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-4 mb-2 md:mb-3">
+              {["Stela", "Nore6el", "Beka", "Mia Oud"].map((name, i) => (
+                <span key={name} className="flex items-center gap-2 md:gap-4">
+                  <span className="font-[var(--font-heading)] text-rose-orion text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-tight">
                     {name}
                   </span>
-                  {i < 4 && (
-                    <span className="text-rose-orion/50 text-sm md:text-lg font-light">
+                  {i < 3 && (
+                    <span className="text-rose-orion/50 text-lg md:text-2xl font-light">
                       &middot;
                     </span>
                   )}
                 </span>
-              )
-            )}
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 mb-6 md:mb-10">
-            {["Knut", "Burning House", "22Chopper", "Este", "Luane"].map(
-              (name, i) => (
-                <span key={name} className="flex items-center gap-2 md:gap-3">
-                  <span className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
-                    {name}
-                  </span>
-                  {i < 4 && (
-                    <span className="text-rose-orion/50 text-sm md:text-lg font-light">
-                      &middot;
-                    </span>
-                  )}
-                </span>
-              )
-            )}
-          </div>
+              ))}
+            </div>
 
-          {/* CTA to programmation */}
-          <Link
-            href="/programmation"
-            className="inline-block mt-6 md:mt-10 px-8 md:px-12 py-3 md:py-4 bg-rose-orion text-bleu-orion font-black uppercase tracking-widest text-xs md:text-sm tilted-btn hover:brightness-110 transition-all"
-          >
-            <span>Voir la programmation</span>
-          </Link>
+            {/* Supporting */}
+            <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 mb-2 md:mb-3">
+              {["Projet Wipeout", "Mucho", "Halusk", "Habiboo", "Yuri"].map(
+                (name, i) => (
+                  <span key={name} className="flex items-center gap-2 md:gap-3">
+                    <span className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
+                      {name}
+                    </span>
+                    {i < 4 && (
+                      <span className="text-rose-orion/50 text-sm md:text-lg font-light">
+                        &middot;
+                      </span>
+                    )}
+                  </span>
+                )
+              )}
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 mb-6 md:mb-10">
+              {["Knut", "Burning House", "22Chopper", "Este", "Luane"].map(
+                (name, i) => (
+                  <span key={name} className="flex items-center gap-2 md:gap-3">
+                    <span className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
+                      {name}
+                    </span>
+                    {i < 4 && (
+                      <span className="text-rose-orion/50 text-sm md:text-lg font-light">
+                        &middot;
+                      </span>
+                    )}
+                  </span>
+                )
+              )}
+            </div>
+
+            {/* CTA to programmation */}
+            <Link
+              href="/programmation"
+              className="inline-block mt-6 md:mt-10 px-8 md:px-12 py-3 md:py-4 bg-rose-orion text-bleu-orion font-black uppercase tracking-widest text-xs md:text-sm tilted-btn hover:brightness-110 transition-all"
+            >
+              <span>Voir la programmation</span>
+            </Link>
+          </Countdown>
 
           {/* Orion logo small at bottom */}
           <Image
