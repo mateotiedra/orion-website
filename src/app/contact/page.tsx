@@ -121,7 +121,7 @@ export default function ContactPage() {
               </h2>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com/orionfestival"
+                  href="https://www.instagram.com/orionfestival.ch/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-bleu-orion transition-all duration-300"

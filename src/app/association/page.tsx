@@ -28,35 +28,49 @@ const pillars = [
   },
 ];
 
-const members = [
-  { name: "Luca Dragon", photo: "ORION - GENEVE - Quentin Pidoux00446.jpg" },
-  { name: "Micky", photo: "ORION - GENEVE - Quentin Pidoux00458.jpg" },
-  { name: "Romain Grimardias", photo: "ORION - GENEVE - Quentin Pidoux00480.jpg" },
-  { name: "Jimmy Cantatore", photo: "ORION - GENEVE - Quentin Pidoux00492.jpg" },
-  { name: "Emma Nunes", photo: "ORION - GENEVE - Quentin Pidoux00498.jpg" },
-  { name: "Laura Zamperini", photo: "ORION - GENEVE - Quentin Pidoux00510.jpg" },
-  { name: "Laurie Favre", photo: "ORION - GENEVE - Quentin Pidoux00526.jpg" },
-  { name: "Nicolo Lopez", photo: "ORION - GENEVE - Quentin Pidoux00538.jpg" },
-  { name: "Guillaume Udry", photo: "ORION - GENEVE - Quentin Pidoux00548.jpg" },
-  { name: "Alexandre Cavallero", photo: "ORION - GENEVE - Quentin Pidoux00569.jpg" },
-  { name: "Leo Lopez", photo: "ORION - GENEVE - Quentin Pidoux00577.jpg" },
-  { name: "Mozer Nicolas", photo: "ORION - GENEVE - Quentin Pidoux00601.jpg" },
-  { name: "Hicham Magnin", photo: "ORION - GENEVE - Quentin Pidoux00613.jpg" },
-  { name: "Quentin Pidoux", photo: "ORION - GENEVE - Quentin Pidoux00636.jpg" },
+type Member = {
+  name: string;
+  role: string;
+  photo?: string;
+};
+
+const members: Member[] = [
+  { name: "Luca Dragone", role: "Chef de secteur Logistique", photo: "ORION - GENEVE - Quentin Pidoux00446.jpg" },
+  { name: "Schnetzler Mickael", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00458.jpg" },
+  { name: "Romain Grimardias", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00480.jpg" },
+  { name: "Jimmy Cantatore", role: "Coordinateur Boissons", photo: "ORION - GENEVE - Quentin Pidoux00492.jpg" },
+  { name: "Emma Nunes", role: "Cheffe de secteur Décoration", photo: "ORION - GENEVE - Quentin Pidoux00498.jpg" },
+  { name: "Laura Zamperini", role: "Co-cheffe de secteur Financement", photo: "ORION - GENEVE - Quentin Pidoux00510.jpg" },
+  { name: "Laurie Favre", role: "Cheffe de secteur Billetterie", photo: "ORION - GENEVE - Quentin Pidoux00526.jpg" },
+  { name: "Nicolo Lopez", role: "Chef de secteur Technique et Sécurité", photo: "ORION - GENEVE - Quentin Pidoux00538.jpg" },
+  { name: "Guillaume Udry", role: "Trésorier", photo: "ORION - GENEVE - Quentin Pidoux00548.jpg" },
+  { name: "Alexandre Cavallero", role: "Chef de secteur F&B", photo: "ORION - GENEVE - Quentin Pidoux00569.jpg" },
+  { name: "Leo Lopez", role: "Chef de secteur Bénévole", photo: "ORION - GENEVE - Quentin Pidoux00577.jpg" },
+  { name: "Mozer Nicolas", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00601.jpg" },
+  { name: "Hicham Magnin", role: "Chef de secteur Programmation & Production", photo: "ORION - GENEVE - Quentin Pidoux00613.jpg" },
+  { name: "Quentin Pidoux", role: "Directeur artistique", photo: "ORION - GENEVE - Quentin Pidoux00636.jpg" },
+  { name: "Lucien Jeannet", role: "Co-chef de secteur Financement" },
+  { name: "Clara Herbert", role: "Cheffe de secteur Prévention" },
+  { name: "Emma Staub", role: "Community Manager" },
+  { name: "Alejandro Noda", role: "Chef de secteur Stands" },
+  { name: "Mateo Tiedra", role: "Coordinateur Montage/Démontage" },
+  { name: "Sébastien Rousset", role: "Coordinateur Nourriture" },
 ];
 
 const offsets = [
   "", "mt-6 md:mt-12", "", "mt-4 md:mt-16",
   "md:mt-8", "mt-6 md:mt-20", "", "mt-4 md:mt-10",
   "", "mt-6 md:mt-14", "md:mt-6", "mt-4 md:mt-18",
-  "", "mt-6 md:mt-10",
+  "", "mt-6 md:mt-10", "mt-4 md:mt-16", "",
+  "mt-6 md:mt-12", "md:mt-8", "", "mt-4 md:mt-14",
 ];
 
 const rotations = [
   "", "-rotate-1", "rotate-1", "",
   "-rotate-1", "", "rotate-1", "-rotate-1",
   "", "rotate-1", "", "-rotate-1",
-  "rotate-1", "",
+  "rotate-1", "", "-rotate-1", "rotate-1",
+  "", "-rotate-1", "rotate-1", "",
 ];
 
 export default function AssociationPage() {
@@ -217,20 +231,34 @@ export default function AssociationPage() {
                 className={`group ${offsets[i] || ""} ${rotations[i] || ""} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
               >
                 <div className="aspect-square relative mb-3 md:mb-4 shadow-xl overflow-hidden">
-                  <Image
-                    src={`/images/comite/${member.photo}`}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-all duration-700"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  />
+                  {member.photo ? (
+                    <Image
+                      src={`/images/comite/${member.photo}`}
+                      alt={member.name}
+                      fill
+                      className="object-cover transition-all duration-700"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-white/20 flex items-center justify-center p-4">
+                      <span className="font-heading text-white/40 text-[10px] md:text-xs uppercase tracking-widest text-center">
+                        Photo
+                        <br />
+                        à venir
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-lg md:text-xl lg:text-2xl font-heading font-black text-white uppercase leading-tight">
                   {member.name}
                 </h3>
+                <p className="font-[var(--font-heading)] text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.15em] font-bold mt-1 md:mt-2 leading-tight">
+                  {member.role}
+                </p>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
