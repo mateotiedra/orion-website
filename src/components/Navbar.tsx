@@ -16,7 +16,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-bleu-orion">
+    <nav className="fixed top-0 w-full z-50 bg-bleu-orion grain-overlay">
       <div className="max-w-[1920px] mx-auto px-6 md:px-8 py-4 md:py-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
