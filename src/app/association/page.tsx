@@ -131,7 +131,7 @@ export default function AssociationPage() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 lg:gap-20">
             {/* LEFT — Pull quote (sticky on desktop) */}
-            <aside className="md:col-span-5">
+            <aside className="md:col-span-5 md:pt-5">
               <div className="md:sticky md:top-32">
                 <div className="border-l-2 border-rose-orion pl-5 md:pl-7">
                   <span className="font-heading text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold block mb-4 md:mb-6">
