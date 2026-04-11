@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Social icons placeholder */}
           <div className="flex gap-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/orionfestival.ch/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/20 hover:bg-white hover:text-bleu-orion transition-all text-sm"
