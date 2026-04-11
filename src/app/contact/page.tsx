@@ -39,16 +39,20 @@ export default function ContactPage() {
       {/* ============ HERO ============ */}
       <section className="relative bg-bleu-orion pt-28 md:pt-36 pb-20 md:pb-32 px-4 md:px-6 grain-overlay text-center">
         <Image
-          src="/images/decorations/nebula-glow.png"
+          src="/images/decorations/etoile-polaire-rose.png"
           alt=""
           width={800}
           height={800}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%] opacity-50 pointer-events-none mix-blend-multiply"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%] opacity-60 pointer-events-none"
           aria-hidden="true"
           priority
         />
+        {/* Constellation scatter — rose stars */}
+        <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[28%] left-[12%] w-5 md:w-8 opacity-50 rotate-[18deg] pointer-events-none z-[6]" aria-hidden="true" />
+        <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[40%] right-[14%] w-4 md:w-7 opacity-45 -rotate-[24deg] pointer-events-none z-[6]" aria-hidden="true" />
+        <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute bottom-[20%] left-[20%] w-6 md:w-10 opacity-40 rotate-[10deg] pointer-events-none z-[6]" aria-hidden="true" />
         <div className="relative z-20 max-w-7xl mx-auto">
-          <h1 className="font-[var(--font-heading)] font-black text-[12vw] md:text-[7vw] text-white uppercase tracking-tighter leading-[0.85]">
+          <h1 className="page-title text-[10vw] md:text-[6vw]">
             Contact
           </h1>
         </div>
@@ -68,17 +72,17 @@ export default function ContactPage() {
                     : "bg-white border border-gray-100 hover:border-bleu-orion/20"
                 }`}
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span
-                      className={`font-[var(--font-heading)] text-xs uppercase tracking-[0.2em] font-bold block mb-2 ${
+                      className={`font-heading text-xs uppercase tracking-[0.2em] font-bold block mb-2 ${
                         contact.primary ? "text-rose-orion" : "text-rose-orion"
                       }`}
                     >
                       {contact.label}
                     </span>
                     <span
-                      className={`font-[var(--font-heading)] text-xl md:text-2xl lg:text-3xl font-black block mb-2 ${
+                      className={`font-heading text-base md:text-lg lg:text-xl font-black block mb-2 break-all ${
                         contact.primary ? "text-white" : "text-bleu-orion"
                       }`}
                     >
@@ -93,7 +97,7 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <span
-                    className={`font-[var(--font-heading)] text-xs uppercase tracking-widest font-bold shrink-0 ${
+                    className={`font-heading text-xs uppercase tracking-widest font-bold shrink-0 ${
                       contact.primary ? "text-rose-orion" : "text-bleu-orion/50"
                     }`}
                   >
@@ -112,7 +116,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             {/* Socials */}
             <div>
-              <h2 className="font-[var(--font-heading)] text-rose-orion text-lg md:text-xl font-black uppercase tracking-widest mb-8">
+              <h2 className="font-heading text-rose-orion text-lg md:text-xl font-black uppercase tracking-widest mb-8">
                 Suivez-nous
               </h2>
               <div className="flex gap-4">
@@ -139,7 +143,7 @@ export default function ContactPage() {
 
             {/* Address */}
             <div>
-              <h2 className="font-[var(--font-heading)] text-rose-orion text-lg md:text-xl font-black uppercase tracking-widest mb-8">
+              <h2 className="font-heading text-rose-orion text-lg md:text-xl font-black uppercase tracking-widest mb-8">
                 Adresse
               </h2>
               <div className="text-white/80 space-y-2">

@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const horizon = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Horizon/Horizon.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-horizon",
+  display: "swap",
 });
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["700"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${spaceGrotesk.variable} ${poppins.variable} antialiased`}
+      className={`${horizon.variable} ${poppins.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">{children}</body>
     </html>

@@ -24,7 +24,7 @@ export default function Footer() {
               className="h-10 md:h-14 w-auto"
             />
           </div>
-          <p className="text-white/60 mb-8 leading-relaxed font-[var(--font-heading)] text-xs uppercase tracking-[0.2em] font-bold max-w-sm">
+          <p className="text-white/60 mb-8 leading-relaxed font-heading text-xs uppercase tracking-[0.2em] font-bold max-w-sm">
             Une expérience céleste au coeur du Parc des Molliers. Créé par
             l&apos;Association Orion avec passion et poussière d&apos;étoiles.
           </p>
@@ -54,31 +54,31 @@ export default function Footer() {
         {/* Right columns */}
         <div className="grid grid-cols-2 gap-12 md:gap-24">
           <div className="flex flex-col gap-4 md:gap-6">
-            <h5 className="font-[var(--font-heading)] text-rose-orion font-black uppercase tracking-[0.2em] text-xs mb-2 md:mb-4">
+            <h5 className="font-heading text-rose-orion font-black uppercase tracking-[0.2em] text-xs mb-2 md:mb-4">
               Navigation
             </h5>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="opacity-50 text-white hover:opacity-100 hover:text-rose-orion transition-colors font-[var(--font-heading)] uppercase text-xs font-bold tracking-widest"
+                className="opacity-50 text-white hover:opacity-100 hover:text-rose-orion transition-colors font-heading uppercase text-xs font-bold tracking-widest"
               >
                 {link.label}
               </Link>
             ))}
           </div>
           <div className="flex flex-col gap-4 md:gap-6">
-            <h5 className="font-[var(--font-heading)] text-rose-orion font-black uppercase tracking-[0.2em] text-xs mb-2 md:mb-4">
+            <h5 className="font-heading text-rose-orion font-black uppercase tracking-[0.2em] text-xs mb-2 md:mb-4">
               Contact
             </h5>
             <a
               href="mailto:Administratif@orionfestival.ch"
-              className="opacity-50 text-white hover:opacity-100 hover:text-rose-orion transition-colors font-[var(--font-heading)] uppercase text-xs font-bold tracking-widest break-all"
+              className="opacity-50 text-white hover:opacity-100 hover:text-rose-orion transition-colors font-heading uppercase text-xs font-bold tracking-widest break-all"
             >
               Administratif@orionfestival.ch
             </a>
             <div className="mt-4">
-              <p className="opacity-50 text-white font-[var(--font-heading)] uppercase text-xs font-bold tracking-widest">
+              <p className="opacity-50 text-white font-heading uppercase text-xs font-bold tracking-widest">
                 Bernex, Suisse
               </p>
             </div>
@@ -88,13 +88,20 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto mt-20 md:mt-40 pt-8 md:pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8">
-        <p className="font-[var(--font-heading)] tracking-[0.2em] uppercase text-xs font-bold opacity-40">
+        <p className="font-heading tracking-[0.2em] uppercase text-xs font-bold opacity-40">
           &copy; 2026 Association Orion Festival
         </p>
       </div>
 
-      {/* Decorative nebula */}
-      <div className="absolute bottom-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] nebula-glow opacity-40 pointer-events-none" />
+      {/* Decorative étoile polaire */}
+      <Image
+        src="/images/decorations/etoile-polaire-rose.png"
+        alt=""
+        width={600}
+        height={600}
+        className="absolute bottom-0 right-0 w-[400px] md:w-[600px] h-auto opacity-50 pointer-events-none"
+        aria-hidden="true"
+      />
     </footer>
   );
 }

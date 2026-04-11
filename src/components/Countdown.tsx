@@ -53,22 +53,22 @@ export default function Countdown({
 
   return (
     <div className="text-center">
-      <p className="font-[var(--font-heading)] text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] font-bold mb-6 md:mb-10">
+      <p className="font-heading text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] font-bold mb-6 md:mb-10">
         Programmation révélée dans
       </p>
       <div className="flex items-center justify-center gap-3 md:gap-6">
         {units.map((unit, i) => (
           <div key={unit.label} className="flex items-center gap-3 md:gap-6">
             <div className="text-center">
-              <span className="font-[var(--font-heading)] text-3xl md:text-6xl lg:text-7xl font-black text-white block leading-none">
+              <span className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white block leading-none">
                 {String(unit.value).padStart(2, "0")}
               </span>
-              <span className="font-[var(--font-heading)] text-[9px] md:text-xs text-rose-orion uppercase tracking-[0.2em] font-bold mt-1 block">
+              <span className="font-heading text-[9px] md:text-xs text-rose-orion uppercase tracking-[0.2em] font-bold mt-1 block">
                 {unit.label}
               </span>
             </div>
             {i < units.length - 1 && (
-              <span className="font-[var(--font-heading)] text-2xl md:text-5xl text-white/30 font-bold -mt-4 md:-mt-6">
+              <span className="font-heading text-2xl md:text-5xl text-white/30 font-bold -mt-4 md:-mt-6">
                 :
               </span>
             )}
