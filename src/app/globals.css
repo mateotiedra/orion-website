@@ -5,7 +5,7 @@
   --color-rose-orion: #E1B5BC;
   --color-cream: #FFFFFF;
   --color-cream-dark: #EFEEEA;
-  --font-heading: var(--font-space-grotesk);
+  --font-heading: var(--font-horizon);
   --font-subtitle: var(--font-poppins);
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -17,39 +17,31 @@ body {
   overflow-x: hidden;
 }
 
-/* Nebula glow effects */
-.nebula-glow {
-  background: radial-gradient(
-    circle,
-    rgba(225, 181, 188, 0.45) 0%,
-    rgba(72, 108, 164, 0) 70%
-  );
-}
-
-.nebula-glow-blue {
-  background: radial-gradient(
-    circle,
-    rgba(72, 108, 164, 0.4) 0%,
-    rgba(72, 108, 164, 0) 70%
-  );
-}
-
-/* Grain/noise stipple texture overlay */
+/* Grain/noise texture overlay */
 .grain-overlay {
   position: relative;
   overflow: visible;
+  isolation: isolate;
 }
 
 .grain-overlay::after {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.08;
+  opacity: 0.45;
   pointer-events: none;
-  z-index: 50;
-  background-image: url("/images/decorations/stipple-noise.png");
+  z-index: 1;
+  background-image: url("/images/decorations/bg-rose-grain.png");
   background-repeat: repeat;
   background-size: 1024px 1024px;
+  mix-blend-mode: multiply;
+}
+
+/* On dark blue sections, multiply turns pink grain black —
+   use screen so the pink grain stays visible. */
+.bg-bleu-orion.grain-overlay::after {
+  mix-blend-mode: screen;
+  opacity: 0.55;
 }
 
 /* Cosmic blob decoration */
@@ -72,6 +64,17 @@ body {
 /* Poster-style tight leading */
 .text-poster {
   line-height: 0.85;
+}
+
+/* Hero page title — Horizon display font, centered, tight */
+.page-title {
+  font-family: var(--font-horizon);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
+  text-align: center;
 }
 
 /* Star decoration base */

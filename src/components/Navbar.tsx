@@ -30,7 +30,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex gap-8 lg:gap-10 font-[var(--font-heading)] uppercase tracking-[0.15em] font-bold text-sm">
+        <div className="hidden md:flex gap-8 lg:gap-10 font-heading uppercase tracking-[0.15em] font-bold text-sm">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -72,7 +72,7 @@ export default function Navbar() {
           menuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 pb-10 pt-6 flex flex-col gap-2 font-[var(--font-heading)] uppercase tracking-[0.15em] font-bold text-xl text-center">
+        <div className="px-6 pb-10 pt-6 flex flex-col gap-2 font-heading uppercase tracking-[0.15em] font-bold text-xl text-center">
           {navLinks.map((link, i) => (
             <Link
               key={link.href}
