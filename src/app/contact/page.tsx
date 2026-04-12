@@ -66,40 +66,35 @@ export default function ContactPage() {
               <a
                 key={contact.email}
                 href={`mailto:${contact.email}`}
-                className={`block p-6 md:p-10 transition-all duration-300 hover:scale-[1.02] ${
-                  contact.primary
+                className={`block p-6 md:p-10 transition-all duration-300 hover:scale-[1.02] ${contact.primary
                     ? "bg-bleu-orion text-white"
                     : "bg-white border border-gray-100 hover:border-bleu-orion/20"
-                }`}
+                  }`}
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 min-w-0">
                   <div className="min-w-0 flex-1">
                     <span
-                      className={`font-heading text-xs uppercase tracking-[0.2em] font-bold block mb-2 ${
-                        contact.primary ? "text-rose-orion" : "text-rose-orion"
-                      }`}
+                      className={`font-heading text-xs uppercase tracking-[0.2em] font-bold block mb-2 ${contact.primary ? "text-rose-orion" : "text-rose-orion"
+                        }`}
                     >
                       {contact.label}
                     </span>
                     <span
-                      className={`font-heading text-base md:text-lg lg:text-xl font-black block mb-2 break-all ${
-                        contact.primary ? "text-white" : "text-bleu-orion"
-                      }`}
+                      className={`font-heading text-base md:text-lg lg:text-xl font-black block mb-2 break-all ${contact.primary ? "text-white" : "text-bleu-orion"
+                        }`}
                     >
                       {contact.email}
                     </span>
                     <span
-                      className={`text-sm md:text-base ${
-                        contact.primary ? "text-white/70" : "text-gray-500"
-                      }`}
+                      className={`text-sm md:text-base ${contact.primary ? "text-white/70" : "text-gray-500"
+                        }`}
                     >
                       {contact.description}
                     </span>
                   </div>
                   <span
-                    className={`font-heading text-xs uppercase tracking-widest font-bold shrink-0 ${
-                      contact.primary ? "text-rose-orion" : "text-bleu-orion/50"
-                    }`}
+                    className={`font-heading text-xs uppercase tracking-widest font-bold shrink-0 ${contact.primary ? "text-rose-orion" : "text-bleu-orion/50"
+                      }`}
                   >
                     Écrire →
                   </span>
@@ -130,7 +125,7 @@ export default function ContactPage() {
                   <FaInstagram className="w-6 h-6 md:w-7 md:h-7" />
                 </a>
                 <a
-                  href="https://tiktok.com/@orionfestival"
+                  href="https://www.tiktok.com/@orionfestival.ch"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-bleu-orion transition-all duration-300"
