@@ -131,13 +131,13 @@ export default function AssociationPage() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 lg:gap-20">
             {/* LEFT — Pull quote (sticky on desktop) */}
-            <aside className="md:col-span-5 md:pt-5">
+            <aside className="md:col-span-5">
               <div className="md:sticky md:top-32">
                 <div className="border-l-2 border-rose-orion pl-5 md:pl-7">
                   <span className="font-heading text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold block mb-4 md:mb-6">
                     Manifeste
                   </span>
-                  <blockquote className="font-heading text-2xl md:text-3xl lg:text-5xl font-black text-bleu-orion tracking-tighter leading-[1.05]">
+                  <blockquote className="font-heading text-3xl md:text-3xl lg:text-[2.75rem] font-black text-bleu-orion tracking-tighter leading-[1.05]">
                     &laquo;&nbsp;Pourquoi attendre l&apos;événement idéal quand
                     on peut le créer&nbsp;?&nbsp;&raquo;
                   </blockquote>
