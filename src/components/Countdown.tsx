@@ -59,7 +59,7 @@ export default function Countdown({
       <div className="flex items-center justify-center gap-3 md:gap-6">
         {units.map((unit, i) => (
           <div key={unit.label} className="flex items-center gap-3 md:gap-6">
-            <div className="text-center">
+            <div className="text-center w-[3ch] md:w-[3ch]">
               <span className="font-heading text-3xl md:text-6xl lg:text-7xl font-black text-white block leading-none">
                 {String(unit.value).padStart(2, "0")}
               </span>

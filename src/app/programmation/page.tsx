@@ -95,7 +95,7 @@ export default function ProgrammationPage() {
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[18%] right-[12%] w-5 md:w-9 opacity-50 rotate-[18deg] pointer-events-none z-[6]" aria-hidden="true" />
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[30%] left-[14%] w-4 md:w-7 opacity-40 -rotate-[22deg] pointer-events-none z-[6]" aria-hidden="true" />
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute bottom-[18%] right-[18%] w-6 md:w-10 opacity-45 rotate-[12deg] pointer-events-none z-[6]" aria-hidden="true" />
-        <div className="relative z-20 max-w-7xl mx-auto text-center">
+        <div className="relative z-20 w-full max-w-7xl mx-auto text-center">
           <h1 className="page-title text-[7.5vw] md:text-[5.5vw] mb-4 md:mb-6">
             Programmation
           </h1>
