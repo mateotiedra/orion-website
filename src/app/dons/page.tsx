@@ -130,7 +130,7 @@ export default function DonsPage() {
                 key={tier.amount}
                 className="flex items-end gap-4 md:gap-8 border-b border-gray-200 pb-6 md:pb-8"
               >
-                <span className="font-heading text-4xl md:text-6xl lg:text-8xl font-black text-bleu-orion shrink-0 leading-none">
+                <span className="font-heading text-4xl md:text-6xl lg:text-8xl font-black text-rose-orion shrink-0 leading-none">
                   {tier.amount}
                   <span className="text-lg md:text-2xl lg:text-3xl ml-1">
                     CHF
