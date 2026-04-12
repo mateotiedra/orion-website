@@ -57,10 +57,10 @@ export default function Home() {
         {/* Top bar — location left, date right */}
         <div className="relative z-20 flex justify-between items-start pt-20 md:pt-28">
           <div>
-            <p className="font-heading text-rose-orion text-xs md:text-sm lg:text-base font-black uppercase tracking-wider">
+            <p className="font-subtitle text-rose-orion text-xs md:text-sm lg:text-base font-bold uppercase tracking-wider">
               Bernex, Parc des Molliers
             </p>
-            <p className="font-heading text-rose-orion text-xs md:text-sm lg:text-base font-black uppercase tracking-wider">
+            <p className="font-subtitle text-rose-orion text-xs md:text-sm lg:text-base font-bold uppercase tracking-wider">
               Entrée prix libre
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function Home() {
 
           {/* Title + text — shown first on mobile, centred on desktop */}
           <div className="mb-12 md:hidden">
-            <span className="font-heading uppercase tracking-widest text-rose-orion font-bold text-xs mb-4 block">
+            <span className="font-subtitle uppercase tracking-widest text-rose-orion font-bold text-xs mb-4 block">
               Manifeste
             </span>
             <h2 className="font-heading text-5xl font-black text-bleu-orion mb-6 tracking-tighter leading-[0.85]">
@@ -215,7 +215,7 @@ export default function Home() {
                 <h4 className="font-heading text-2xl md:text-4xl lg:text-6xl font-black text-bleu-orion uppercase">
                   Scène <br /> Live
                 </h4>
-                <p className="text-gray-500 text-[10px] md:text-sm mt-2 md:mt-4 font-bold uppercase tracking-widest">
+                <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-2 md:mt-4 font-bold uppercase tracking-widest">
                   Instruments et voix
                 </p>
               </div>
@@ -229,7 +229,7 @@ export default function Home() {
                 <h4 className="font-heading text-2xl md:text-4xl lg:text-6xl font-black text-rose-orion uppercase">
                   Scène <br /> DJ
                 </h4>
-                <p className="text-gray-500 text-[10px] md:text-sm mt-2 md:mt-4 font-bold uppercase tracking-widest">
+                <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-2 md:mt-4 font-bold uppercase tracking-widest">
                   Sets immersifs
                 </p>
               </div>
@@ -238,7 +238,7 @@ export default function Home() {
 
           {/* Centre title — desktop only (mobile shown above) */}
           <div className="hidden md:block md:max-w-2xl md:mx-auto md:text-center md:py-20 lg:py-32">
-            <span className="font-heading uppercase tracking-widest text-rose-orion font-bold text-sm mb-6 block">
+            <span className="font-subtitle uppercase tracking-widest text-rose-orion font-bold text-sm mb-6 block">
               Manifeste
             </span>
             <h2 className="font-heading text-7xl lg:text-[8rem] font-black text-bleu-orion mb-12 tracking-tighter leading-[0.85]">
@@ -267,7 +267,7 @@ export default function Home() {
                   <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
                     Gastronomie
                   </h4>
-                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                  <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
                     3 stands de nourriture
                   </p>
                 </div>
@@ -282,7 +282,7 @@ export default function Home() {
                   <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
                     Désaltération
                   </h4>
-                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                  <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
                     2 bars + Biergarten
                   </p>
                 </div>
@@ -300,7 +300,7 @@ export default function Home() {
                   <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
                     Artisanat
                   </h4>
-                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                  <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
                     3 stands de créateurs
                   </p>
                 </div>
@@ -315,7 +315,7 @@ export default function Home() {
                   <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
                     Détente
                   </h4>
-                  <p className="text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
+                  <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
                     Pétanque + chill zones
                   </p>
                 </div>
@@ -324,7 +324,7 @@ export default function Home() {
           </div>
 
           {/* Closing line */}
-          <p className="mt-12 md:mt-32 text-center font-heading text-rose-orion text-base md:text-2xl lg:text-3xl font-black uppercase tracking-wider">
+          <p className="mt-12 md:mt-32 text-center font-subtitle text-rose-orion text-base md:text-2xl lg:text-3xl font-bold uppercase tracking-wider">
             Bref, Orion c&apos;est l&apos;événement à ne pas manquer de 2026&nbsp;!
           </p>
 

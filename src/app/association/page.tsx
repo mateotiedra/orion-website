@@ -97,7 +97,7 @@ export default function AssociationPage() {
           <h1 className="page-title text-[7.5vw] md:text-[5.5vw] mb-4 md:mb-6">
             L&apos;Association
           </h1>
-          <p className="font-heading text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold">
+          <p className="font-subtitle text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold">
             23 membres passionnés · 14 secteurs
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function AssociationPage() {
             <aside className="md:col-span-5">
               <div className="md:sticky md:top-32">
                 <div className="border-l-2 border-rose-orion pl-5 md:pl-7">
-                  <span className="font-heading text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold block mb-4 md:mb-6">
+                  <span className="font-subtitle text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold block mb-4 md:mb-6">
                     Manifeste
                   </span>
                   <blockquote className="font-heading text-3xl md:text-3xl lg:text-[2.75rem] font-black text-bleu-orion tracking-tighter leading-[1.05]">
@@ -185,7 +185,7 @@ export default function AssociationPage() {
                   <span className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-bleu-orion leading-none block tracking-tighter">
                     23
                   </span>
-                  <span className="font-heading text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold block mt-3 md:mt-4">
+                  <span className="font-subtitle text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold block mt-3 md:mt-4">
                     Membres passionnés
                   </span>
                 </div>
@@ -193,7 +193,7 @@ export default function AssociationPage() {
                   <span className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-bleu-orion leading-none block tracking-tighter">
                     14
                   </span>
-                  <span className="font-heading text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold block mt-3 md:mt-4">
+                  <span className="font-subtitle text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold block mt-3 md:mt-4">
                     Secteurs d&apos;activité
                   </span>
                 </div>
@@ -252,7 +252,7 @@ export default function AssociationPage() {
                 <h3 className="text-lg md:text-xl lg:text-2xl font-heading font-black text-white uppercase leading-tight">
                   {member.name}
                 </h3>
-                <p className="font-[var(--font-heading)] text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.15em] font-bold mt-1 md:mt-2 leading-tight">
+                <p className="font-subtitle text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.15em] font-bold mt-1 md:mt-2 leading-tight">
                   {member.role}
                 </p>
               </div>
