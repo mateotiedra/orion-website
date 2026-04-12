@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PartnersSection from "@/components/PartnersSection";
 import Countdown from "@/components/Countdown";
-import { PiHamburger, PiBeerStein, PiPaintBrush, PiSunHorizon } from "react-icons/pi";
+
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           alt=""
           width={800}
           height={800}
-          className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[55%] opacity-70 pointer-events-none"
+          className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350%] max-w-none md:w-[75%] md:max-w-[75%] opacity-70 pointer-events-none"
           aria-hidden="true"
           priority
         />
@@ -40,35 +40,25 @@ export default function Home() {
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[22%] right-[14%] w-5 md:w-8 opacity-55 rotate-[35deg] pointer-events-none z-[6]" aria-hidden="true" />
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[72%] right-[20%] w-4 md:w-7 opacity-40 -rotate-[12deg] pointer-events-none z-[6]" aria-hidden="true" />
 
-        {/* Vertical text — left side */}
-        <div className="hidden md:block absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20">
-          <p className="font-heading text-rose-orion/60 text-sm lg:text-base uppercase tracking-[0.3em] font-bold whitespace-nowrap -rotate-90 origin-center">
-            Sous les étoiles tous les sons brillent
-          </p>
-        </div>
-
-        {/* Vertical text — right side */}
-        <div className="hidden md:block absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20">
-          <p className="font-heading text-rose-orion/60 text-sm lg:text-base uppercase tracking-[0.3em] font-bold whitespace-nowrap rotate-90 origin-center">
-            Sous les étoiles tous les sons brillent
-          </p>
+        {/* Side accent — left */}
+        <div className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 items-center gap-3 -rotate-90 origin-center">
+          <span className="font-heading text-rose-orion/40 text-sm lg:text-base font-bold tracking-[0.3em] uppercase">18—19.09</span>
         </div>
 
         {/* Top bar — location left, date right */}
         <div className="relative z-20 flex justify-between items-start pt-20 md:pt-28">
           <div>
-            <p className="font-subtitle text-rose-orion text-xs md:text-sm lg:text-base font-bold uppercase tracking-wider">
-              Bernex, Parc des Molliers
-            </p>
-            <p className="font-subtitle text-rose-orion text-xs md:text-sm lg:text-base font-bold uppercase tracking-wider">
-              Entrée prix libre
+            <p className="font-heading text-white text-lg md:text-2xl lg:text-3xl font-black uppercase tracking-tight leading-[0.95]">
+              Bernex, Parc
+              <br />
+              des Molliers
             </p>
           </div>
           <div className="text-right">
-            <p className="font-heading text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight leading-[0.9]">
+            <p className="font-heading text-white text-lg md:text-2xl lg:text-3xl font-black uppercase tracking-tight leading-[0.95]">
               18 - 19
               <br />
-              SEPT
+              Septembre
             </p>
           </div>
         </div>
@@ -83,8 +73,8 @@ export default function Home() {
           <span className="font-heading text-rose-orion text-lg lg:text-xl font-bold">&apos;26</span>
         </div>
 
-        {/* Centre — Logo */}
-        <div className="relative z-20 flex-1 flex items-center justify-center py-12 md:py-0">
+        {/* Centre — Logo + prix libre */}
+        <div className="relative z-20 flex-1 flex flex-col items-center justify-center py-12 md:py-0">
           <Image
             src="/images/logo/logo-blanc-plein.svg"
             alt="Orion Festival"
@@ -93,6 +83,9 @@ export default function Home() {
             className="w-[70%] md:w-[45%] lg:w-[35%] h-auto"
             priority
           />
+          <p className="font-subtitle text-white text-sm md:text-lg lg:text-xl font-bold uppercase tracking-[0.25em] mt-4 md:mt-6">
+            Entrée prix libre
+          </p>
         </div>
 
         {/* Bottom — Lineup or Countdown */}
@@ -190,11 +183,11 @@ export default function Home() {
           {/* Mobile: title first, then stages. Desktop: stages flank top, title centre */}
 
           {/* Title + text — shown first on mobile, centred on desktop */}
-          <div className="mb-12 md:hidden">
-            <span className="font-subtitle uppercase tracking-widest text-rose-orion font-bold text-xs mb-4 block">
+          <div className="mb-12 md:hidden text-center">
+            <span className="font-subtitle uppercase tracking-widest text-rose-orion font-bold text-xs mb-4 block ">
               Manifeste
             </span>
-            <h2 className="font-heading text-5xl font-black text-bleu-orion mb-6 tracking-tighter leading-[0.85]">
+            <h2 className="font-heading text-5xl font-black text-bleu-orion mb-6 tracking-tighter leading-[0.85] text-center">
               L&apos;ESPACE <span className="text-rose-orion">ORION</span>
             </h2>
             <p className="text-gray-600 text-base leading-relaxed font-medium">
@@ -237,7 +230,7 @@ export default function Home() {
           </div>
 
           {/* Centre title — desktop only (mobile shown above) */}
-          <div className="hidden md:block md:max-w-2xl md:mx-auto md:text-center md:py-20 lg:py-32">
+          <div className="hidden md:flex md:flex-col md:items-center md:max-w-2xl md:mx-auto md:text-center md:py-20 lg:py-32">
             <span className="font-subtitle uppercase tracking-widest text-rose-orion font-bold text-sm mb-6 block">
               Manifeste
             </span>
@@ -255,7 +248,7 @@ export default function Home() {
           </div>
 
           {/* 4 activities — 2x2 on mobile, alternating left/right on desktop */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:block md:space-y-20 lg:space-y-24">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-10 overflow-hidden md:block md:space-y-20 lg:space-y-24">
             {/* Row 1: Gastronomie left, Désaltération right */}
             <div className="contents md:flex md:justify-between md:items-start md:gap-16">
               <div className="relative group md:w-2/5">
@@ -263,8 +256,7 @@ export default function Home() {
                   FOOD
                 </h3>
                 <div className="relative z-10">
-                  <PiHamburger className="w-7 h-7 md:w-10 md:h-10 text-rose-orion/50 mb-2" />
-                  <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
+                  <h4 className="font-heading text-base md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
                     Gastronomie
                   </h4>
                   <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
@@ -278,8 +270,7 @@ export default function Home() {
                   BARS
                 </h3>
                 <div className="relative z-10">
-                  <PiBeerStein className="w-7 h-7 md:w-10 md:h-10 text-bleu-orion/30 mb-2 md:ml-auto" />
-                  <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
+                  <h4 className="font-heading text-base md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
                     Désaltération
                   </h4>
                   <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
@@ -296,8 +287,7 @@ export default function Home() {
                   CRAFT
                 </h3>
                 <div className="relative z-10">
-                  <PiPaintBrush className="w-7 h-7 md:w-10 md:h-10 text-rose-orion/50 mb-2" />
-                  <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
+                  <h4 className="font-heading text-base md:text-3xl lg:text-4xl font-black text-bleu-orion uppercase">
                     Artisanat
                   </h4>
                   <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
@@ -311,8 +301,7 @@ export default function Home() {
                   CHILL
                 </h3>
                 <div className="relative z-10">
-                  <PiSunHorizon className="w-7 h-7 md:w-10 md:h-10 text-bleu-orion/30 mb-2 md:ml-auto" />
-                  <h4 className="font-heading text-xl md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
+                  <h4 className="font-heading text-base md:text-3xl lg:text-4xl font-black text-rose-orion uppercase">
                     Détente
                   </h4>
                   <p className="font-subtitle text-gray-500 text-[10px] md:text-sm mt-1 md:mt-2 font-bold uppercase tracking-widest">
@@ -330,8 +319,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      <PartnersSection />
 
       {/* ============ DONS CTA ============ */}
       <section className="py-20 md:py-40 px-4 md:px-6 bg-cream relative grain-overlay">
@@ -363,6 +350,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <PartnersSection />
 
       <Footer />
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import LoadingScreen from "@/components/LoadingScreen";
 import "./globals.css";
 
 const horizon = localFont({
@@ -37,7 +38,10 @@ export default function RootLayout({
       lang="fr"
       className={`${horizon.variable} ${poppins.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <LoadingScreen />
+        {children}
+      </body>
     </html>
   );
 }

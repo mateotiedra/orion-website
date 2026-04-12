@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Countdown from "@/components/Countdown";
+import CountdownTimer from "@/components/CountdownTimer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -79,7 +80,7 @@ export default function ProgrammationPage() {
           alt=""
           width={800}
           height={800}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%] opacity-60 pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350%] max-w-none md:w-[75%] md:max-w-[75%] opacity-70 pointer-events-none"
           aria-hidden="true"
           priority
         />
@@ -96,17 +97,18 @@ export default function ProgrammationPage() {
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute top-[30%] left-[14%] w-4 md:w-7 opacity-40 -rotate-[22deg] pointer-events-none z-[6]" aria-hidden="true" />
         <Image src="/images/decorations/etoile-rose.png" alt="" width={60} height={60} className="absolute bottom-[18%] right-[18%] w-6 md:w-10 opacity-45 rotate-[12deg] pointer-events-none z-[6]" aria-hidden="true" />
         <div className="relative z-20 w-full max-w-7xl mx-auto text-center">
-          <h1 className="page-title text-[7.5vw] md:text-[5.5vw] mb-4 md:mb-6">
+          <h1 className="page-title text-[6.5vw] md:text-[5.5vw] mb-4 md:mb-6">
             Programmation
           </h1>
           <p className="font-heading text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold mb-10 md:mb-16">
             18 - 19 SEPT &apos;26 · Bernex, Parc des Molliers
           </p>
-          <Countdown>
+          <Countdown showTimer={false}>
             <p className="font-heading text-rose-orion text-lg md:text-2xl font-black uppercase tracking-wider">
               Découvrez les artistes ci-dessous
             </p>
           </Countdown>
+          <CountdownTimer label="Programmation révélée dans" size="lg" />
         </div>
       </section>
 

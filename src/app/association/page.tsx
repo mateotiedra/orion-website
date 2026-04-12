@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "L'Association | Orion Festival",
   description:
-    "Découvrez l'association Orion — 23 membres passionnés, guidés par l'ancrage local, l'accessibilité, l'inclusivité et l'écologie.",
+    "Découvrez l'association Orion — des membres passionnés, guidés par l'ancrage local, l'accessibilité, l'inclusivité et l'écologie.",
 };
 
 const pillars = [
@@ -37,7 +37,7 @@ type Member = {
 const members: Member[] = [
   { name: "Luca Dragone", role: "Chef de secteur Logistique", photo: "ORION - GENEVE - Quentin Pidoux00446.jpg" },
   { name: "Schnetzler Mickael", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00458.jpg" },
-  { name: "Romain Grimardias", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00480.jpg" },
+  { name: "Romain Grimardias", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00466.jpg" },
   { name: "Jimmy Cantatore", role: "Coordinateur Boissons", photo: "ORION - GENEVE - Quentin Pidoux00492.jpg" },
   { name: "Emma Nunes", role: "Cheffe de secteur Décoration", photo: "ORION - GENEVE - Quentin Pidoux00498.jpg" },
   { name: "Laura Zamperini", role: "Co-cheffe de secteur Financement", photo: "ORION - GENEVE - Quentin Pidoux00510.jpg" },
@@ -48,7 +48,7 @@ const members: Member[] = [
   { name: "Leo Lopez", role: "Chef de secteur Bénévole", photo: "ORION - GENEVE - Quentin Pidoux00577.jpg" },
   { name: "Mozer Nicolas", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00601.jpg" },
   { name: "Hicham Magnin", role: "Chef de secteur Programmation & Production", photo: "ORION - GENEVE - Quentin Pidoux00613.jpg" },
-  { name: "Quentin Pidoux", role: "Directeur artistique", photo: "ORION - GENEVE - Quentin Pidoux00636.jpg" },
+  { name: "Quentin Pidoux", role: "Directeur artistique", photo: "ORION - GENEVE - Quentin Pidoux00639.jpg" },
   { name: "Lucien Jeannet", role: "Co-chef de secteur Financement" },
   { name: "Clara Herbert", role: "Cheffe de secteur Prévention" },
   { name: "Emma Staub", role: "Community Manager" },
@@ -98,7 +98,7 @@ export default function AssociationPage() {
             L&apos;Association
           </h1>
           <p className="font-subtitle text-rose-orion text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold">
-            23 membres passionnés · 14 secteurs
+            {members.length} membres passionnés · 14 secteurs
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export default function AssociationPage() {
               <div className="grid grid-cols-2 gap-6 md:gap-12 mt-14 md:mt-20 mb-14 md:mb-20 border-y border-bleu-orion/15 py-8 md:py-12">
                 <div>
                   <span className="font-heading text-6xl md:text-8xl lg:text-9xl font-black text-bleu-orion leading-none block tracking-tighter">
-                    23
+                    {members.length}
                   </span>
                   <span className="font-subtitle text-rose-orion text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold block mt-3 md:mt-4">
                     Membres passionnés

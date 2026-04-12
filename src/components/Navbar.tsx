@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,9 +14,17 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-bleu-orion grain-overlay">
+    <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 ${scrolled || menuOpen ? "bg-bleu-orion grain-overlay" : "bg-transparent"}`}>
       <div className="max-w-[1920px] mx-auto px-6 md:px-8 py-4 md:py-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">

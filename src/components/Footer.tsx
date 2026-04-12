@@ -61,7 +61,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="opacity-50 text-white hover:opacity-100 hover:text-rose-orion transition-colors font-heading uppercase text-xs font-bold tracking-widest"
+                className="text-white hover:text-rose-orion transition-colors font-heading uppercase text-xs font-bold tracking-widest"
               >
                 {link.label}
               </Link>
@@ -73,12 +73,12 @@ export default function Footer() {
             </h5>
             <a
               href="mailto:Administratif@orionfestival.ch"
-              className="opacity-50 text-white hover:opacity-100 hover:text-rose-orion transition-colors font-heading uppercase text-xs font-bold tracking-widest break-all"
+              className="text-white hover:text-rose-orion transition-colors font-heading uppercase text-xs font-bold tracking-widest break-all"
             >
               Administratif@orionfestival.ch
             </a>
             <div className="mt-4">
-              <p className="opacity-50 text-white font-heading uppercase text-xs font-bold tracking-widest">
+              <p className="text-white font-heading uppercase text-xs font-bold tracking-widest">
                 Bernex, Suisse
               </p>
             </div>
@@ -88,14 +88,14 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto mt-20 md:mt-40 pt-8 md:pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8">
-        <p className="font-heading tracking-[0.2em] uppercase text-xs font-bold opacity-40">
+        <p className="font-heading tracking-[0.2em] uppercase text-xs font-bold">
           &copy; 2026 Association Orion Festival
         </p>
       </div>
 
       {/* Decorative étoile polaire */}
       <Image
-        src="/images/decorations/etoile-polaire-rose.png"
+        src="/images/decorations/etoile-deformer-rose.png"
         alt=""
         width={600}
         height={600}
