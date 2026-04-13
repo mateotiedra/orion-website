@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
 
       {/* ============ HERO SECTION — POSTER STYLE ============ */}
-      <section className="relative min-h-screen bg-bleu-orion px-6 md:px-10 lg:px-16 grain-overlay flex flex-col">
+      <section className="relative min-h-screen bg-bleu-orion px-6 md:px-10 lg:px-16 grain-overlay flex flex-col overflow-hidden">
         {/* Étoile polaire centrale — anchor of the hero */}
         <Image
           src="/images/decorations/etoile-polaire-rose.png"

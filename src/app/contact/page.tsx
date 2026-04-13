@@ -157,7 +157,7 @@ export default function ContactPage() {
       {/* ============ MAP ============ */}
       <section className="relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.5!2d6.1!3d46.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDEwJzEyLjAiTiA2wrAwNicwMC4wIkU!5e0!3m2!1sfr!2sch!4v1!5m2!1sfr!2sch&q=Parc+des+Molliers+Bernex+Suisse"
+          src="https://www.google.com/maps?q=Parc+des+Molliers,+Bernex,+Suisse&hl=fr&z=16&output=embed"
           width="100%"
           height="400"
           style={{ border: 0 }}

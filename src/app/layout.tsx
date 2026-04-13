@@ -36,9 +36,9 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${horizon.variable} ${poppins.variable} antialiased`}
+      className={`${horizon.variable} ${poppins.variable} antialiased overflow-x-hidden`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col overflow-x-hidden">
         <LoadingScreen />
         {children}
       </body>

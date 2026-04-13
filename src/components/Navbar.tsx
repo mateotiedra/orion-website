@@ -43,7 +43,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/80 hover:text-rose-orion transition-all duration-300 hover:scale-105"
+              className="text-white hover:text-rose-orion transition-all duration-300 hover:scale-105"
             >
               {link.label}
             </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/80 hover:text-rose-orion transition-all duration-300 py-4 border-b border-white/10"
+              className="text-white hover:text-rose-orion transition-all duration-300 py-4 border-b border-white/10"
               style={{ transitionDelay: menuOpen ? `${i * 50}ms` : "0ms" }}
               onClick={() => setMenuOpen(false)}
             >
