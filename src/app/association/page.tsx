@@ -35,9 +35,10 @@ type Member = {
 };
 
 const members: Member[] = [
-  { name: "Luca Dragone", role: "Chef de secteur Logistique", photo: "ORION - GENEVE - Quentin Pidoux00446.jpg" },
+  { name: "Mozer Nicolas", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00601.jpg" },
   { name: "Schnetzler Mickael", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00458.jpg" },
   { name: "Romain Grimardias", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00466.jpg" },
+  { name: "Luca Dragone", role: "Chef de secteur Logistique", photo: "ORION - GENEVE - Quentin Pidoux00446.jpg" },
   { name: "Jimmy Cantatore", role: "Coordinateur Boissons", photo: "ORION - GENEVE - Quentin Pidoux00492.jpg" },
   { name: "Emma Nunes", role: "Cheffe de secteur Décoration", photo: "ORION - GENEVE - Quentin Pidoux00498.jpg" },
   { name: "Laura Zamperini", role: "Co-cheffe de secteur Financement", photo: "ORION - GENEVE - Quentin Pidoux00510.jpg" },
@@ -46,7 +47,6 @@ const members: Member[] = [
   { name: "Guillaume Udry", role: "Trésorier", photo: "ORION - GENEVE - Quentin Pidoux00548.jpg" },
   { name: "Alexandre Cavallero", role: "Chef de secteur F&B", photo: "ORION - GENEVE - Quentin Pidoux00569.jpg" },
   { name: "Leo Lopez", role: "Chef de secteur Bénévole", photo: "ORION - GENEVE - Quentin Pidoux00577.jpg" },
-  { name: "Mozer Nicolas", role: "Co-président", photo: "ORION - GENEVE - Quentin Pidoux00601.jpg" },
   { name: "Hicham Magnin", role: "Chef de secteur Programmation & Production", photo: "ORION - GENEVE - Quentin Pidoux00613.jpg" },
   { name: "Quentin Pidoux", role: "Directeur artistique", photo: "ORION - GENEVE - Quentin Pidoux00639.jpg" },
   { name: "Lucien Jeannet", role: "Co-chef de secteur Financement" },
