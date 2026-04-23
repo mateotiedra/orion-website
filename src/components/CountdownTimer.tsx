@@ -79,7 +79,7 @@ export default function CountdownTimer({ label, size = "default" }: { label?: st
         {units.map((unit, i) => (
           <div key={unit.label} className={`flex items-center ${s.gap}`}>
             <div className="text-center">
-              <span className={`font-heading ${s.number} font-black text-white block leading-none`}>
+              <span className={`font-heading ${s.number} font-black text-white block leading-none whitespace-nowrap`}>
                 {String(unit.value).padStart(2, "0").split("").map((digit, j) => (
                   <span key={j} className="inline-block w-[1em] text-center">{digit}</span>
                 ))}

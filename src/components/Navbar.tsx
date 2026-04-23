@@ -23,13 +23,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const isSolid = scrolled || menuOpen;
+  const linkColor = isSolid
+    ? "text-bleu-orion hover:text-rose-orion"
+    : "text-white hover:text-rose-orion";
+  const barColor = isSolid ? "bg-bleu-orion" : "bg-white";
+
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 ${scrolled || menuOpen ? "bg-bleu-orion grain-overlay" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-[background-color,box-shadow] duration-300 ${isSolid ? "bg-white shadow-[0_4px_24px_rgba(1,95,156,0.18)]" : "bg-transparent"}`}>
       <div className="max-w-[1920px] mx-auto px-6 md:px-8 py-4 md:py-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/logo/logo-blanc-plein.svg"
+            src={isSolid ? "/images/logo/logo-bleu-plein.svg" : "/images/logo/logo-blanc-plein.svg"}
             alt="Orion Festival"
             width={160}
             height={40}
@@ -43,7 +49,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white hover:text-rose-orion transition-all duration-300 hover:scale-105"
+              className={`${linkColor} transition-all duration-300 hover:scale-105`}
             >
               {link.label}
             </Link>
@@ -52,22 +58,22 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white p-2 relative w-8 h-8"
+          className={`md:hidden p-2 relative w-8 h-8 ${isSolid ? "text-bleu-orion" : "text-white"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >
           <span
-            className={`absolute left-0 block w-8 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+            className={`absolute left-0 block w-8 h-0.5 ${barColor} transition-all duration-300 ease-in-out ${
               menuOpen ? "top-1/2 rotate-45" : "top-1.5"
             }`}
           />
           <span
-            className={`absolute left-0 top-1/2 block w-8 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+            className={`absolute left-0 top-1/2 block w-8 h-0.5 ${barColor} transition-all duration-300 ease-in-out ${
               menuOpen ? "opacity-0 scale-x-0" : "opacity-100"
             }`}
           />
           <span
-            className={`absolute left-0 block w-8 h-0.5 bg-white transition-all duration-300 ease-in-out ${
+            className={`absolute left-0 block w-8 h-0.5 ${barColor} transition-all duration-300 ease-in-out ${
               menuOpen ? "top-1/2 -rotate-45" : "bottom-1.5"
             }`}
           />
@@ -85,7 +91,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white hover:text-rose-orion transition-all duration-300 py-4 border-b border-white/10"
+              className={`${linkColor} transition-all duration-300 py-4 border-b border-bleu-orion/10`}
               style={{ transitionDelay: menuOpen ? `${i * 50}ms` : "0ms" }}
               onClick={() => setMenuOpen(false)}
             >
