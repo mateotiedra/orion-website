@@ -40,10 +40,10 @@ const sizeClasses = {
     heading: "text-sm md:text-lg mb-6 md:mb-10",
   },
   lg: {
-    number: "text-5xl md:text-8xl lg:text-9xl",
-    label: "text-xs md:text-sm",
-    separator: "text-4xl md:text-7xl -mt-6 md:-mt-8",
-    gap: "gap-4 md:gap-8",
+    number: "text-4xl md:text-8xl lg:text-9xl",
+    label: "text-[10px] md:text-sm",
+    separator: "text-3xl md:text-7xl -mt-4 md:-mt-8",
+    gap: "gap-2 md:gap-8",
     heading: "text-base md:text-xl mb-8 md:mb-12",
   },
 } as const;
