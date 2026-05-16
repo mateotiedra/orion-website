@@ -15,7 +15,6 @@ const artists = [
   { name: "Liv Del Estal", stage: "Scène Live", isLive: true },
   { name: "A6el", stage: "Scène DJ", isLive: false },
   { name: "Stela", stage: "Scène Live", isLive: true },
-  { name: "Nore6el", stage: "Scène DJ", isLive: false },
   { name: "Beka", stage: "Scène Live", isLive: true },
   { name: "Mia Oud", stage: "Scène Live", isLive: true },
   { name: "Projet Wipeout", stage: "Scène Live", isLive: true },
@@ -128,11 +127,10 @@ export default function ProgrammationPage() {
                     </span>
                   </div>
                   <span
-                    className={`text-[10px] md:text-xs font-heading font-black uppercase tracking-[0.2em] inline-block tilted-btn px-2 py-1 mb-1 md:mb-2 ${
-                      artist.isLive
-                        ? "text-rose-orion bg-white/10"
-                        : "text-white/60 bg-white/10"
-                    }`}
+                    className={`text-[10px] md:text-xs font-heading font-black uppercase tracking-[0.2em] inline-block tilted-btn px-2 py-1 mb-1 md:mb-2 ${artist.isLive
+                      ? "text-rose-orion bg-white/10"
+                      : "text-white/60 bg-white/10"
+                      }`}
                   >
                     <span>{artist.stage}</span>
                   </span>

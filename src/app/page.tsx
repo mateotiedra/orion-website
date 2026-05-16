@@ -104,7 +104,7 @@ export default function Home() {
 
             {/* Secondary */}
             <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-4 mb-2 md:mb-3">
-              {["Stela", "Nore6el", "Beka", "Mia Oud"].map((name, i) => (
+              {["Stela", "Beka", "Mia Oud"].map((name, i) => (
                 <span key={name} className="flex items-center gap-2 md:gap-4">
                   <span className="font-heading text-rose-orion text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-tight">
                     {name}
