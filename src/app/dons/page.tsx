@@ -194,12 +194,14 @@ export default function DonsPage() {
                 Scannez le QR code ci-dessous pour faire un don en quelques
                 secondes&nbsp;:
               </p>
-              <div className="w-40 h-40 md:w-48 md:h-48 bg-white/20 flex items-center justify-center mx-auto">
-                <span className="font-heading text-white/40 text-xs uppercase tracking-widest text-center">
-                  QR Code
-                  <br />
-                  Twint
-                </span>
+              <div className="bg-white p-4 w-fit mx-auto">
+                <Image
+                  src="/images/qr-twint.png"
+                  alt="QR Code Twint"
+                  width={192}
+                  height={192}
+                  className="w-40 h-40 md:w-48 md:h-48"
+                />
               </div>
             </div>
           </div>
