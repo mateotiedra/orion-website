@@ -23,9 +23,12 @@ export function useCountdownFinished() {
 
   useEffect(() => {
     const check = () => setFinished(getTimeLeft() === null);
-    check();
+    const initial = setTimeout(check, 0);
     const timer = setInterval(check, 1000);
-    return () => clearInterval(timer);
+    return () => {
+      clearTimeout(initial);
+      clearInterval(timer);
+    };
   }, []);
 
   return finished;
@@ -52,9 +55,13 @@ export default function CountdownTimer({ label, size = "default" }: { label?: st
   const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeLeft> | undefined>(undefined);
 
   useEffect(() => {
-    setTimeLeft(getTimeLeft());
-    const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
-    return () => clearInterval(timer);
+    const update = () => setTimeLeft(getTimeLeft());
+    const initial = setTimeout(update, 0);
+    const timer = setInterval(update, 1000);
+    return () => {
+      clearTimeout(initial);
+      clearInterval(timer);
+    };
   }, []);
 
   if (timeLeft === undefined || timeLeft === null) return null;
