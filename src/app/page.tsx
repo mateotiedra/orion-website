@@ -93,11 +93,11 @@ export default function Home() {
           <Countdown>
             {/* Headliners */}
             <div className="flex flex-wrap items-center justify-center gap-x-4 md:gap-x-8 mb-2 md:mb-3">
-              <span className="font-heading text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
+              <span className="font-heading text-white text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
                 Liv Del Estal
               </span>
               <Image src="/images/logo/mono-blanc-etoile.svg" alt="" width={40} height={40} className="w-6 h-6 md:w-8 md:h-8 hidden md:block" aria-hidden="true" />
-              <span className="font-heading text-rose-orion text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
+              <span className="font-heading text-white text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
                 A6el
               </span>
             </div>
@@ -106,11 +106,11 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-4 mb-2 md:mb-3">
               {["Stela", "Beka", "Mia Oud"].map((name, i) => (
                 <span key={name} className="flex items-center gap-2 md:gap-4">
-                  <span className="font-heading text-rose-orion text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-tight">
+                  <span className="font-heading text-white text-xl md:text-3xl lg:text-5xl font-black uppercase tracking-tight">
                     {name}
                   </span>
                   {i < 3 && (
-                    <span className="text-rose-orion/50 text-lg md:text-2xl font-light">
+                    <span className="text-white/50 text-lg md:text-2xl font-light">
                       &middot;
                     </span>
                   )}
@@ -123,11 +123,11 @@ export default function Home() {
               {["Projet Wipeout", "Mucho", "Halusk", "Habiboo", "Yuri"].map(
                 (name, i) => (
                   <span key={name} className="flex items-center gap-2 md:gap-3">
-                    <span className="font-heading text-rose-orion text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
+                    <span className="font-heading text-white text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
                       {name}
                     </span>
                     {i < 4 && (
-                      <span className="text-rose-orion/50 text-sm md:text-lg font-light">
+                      <span className="text-white/50 text-sm md:text-lg font-light">
                         &middot;
                       </span>
                     )}
@@ -139,11 +139,11 @@ export default function Home() {
               {["Knut", "Burning House", "22Chopper", "Este", "Luane"].map(
                 (name, i) => (
                   <span key={name} className="flex items-center gap-2 md:gap-3">
-                    <span className="font-heading text-rose-orion text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
+                    <span className="font-heading text-white text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
                       {name}
                     </span>
                     {i < 4 && (
-                      <span className="text-rose-orion/50 text-sm md:text-lg font-light">
+                      <span className="text-white/50 text-sm md:text-lg font-light">
                         &middot;
                       </span>
                     )}
@@ -155,7 +155,7 @@ export default function Home() {
             {/* CTA to programmation */}
             <Link
               href="/programmation"
-              className="inline-block mt-6 md:mt-10 px-8 md:px-12 py-3 md:py-4 bg-rose-orion text-bleu-orion font-black uppercase tracking-widest text-xs md:text-sm tilted-btn hover:brightness-110 transition-all"
+              className="inline-block mt-6 md:mt-10 px-8 md:px-12 py-3 md:py-4 bg-white text-bleu-orion font-black uppercase tracking-widest text-xs md:text-sm tilted-btn hover:brightness-110 transition-all"
             >
               <span>Voir la programmation</span>
             </Link>
