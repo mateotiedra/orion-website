@@ -4,6 +4,7 @@ import {
   FaGlobe,
   FaInstagram,
   FaPlay,
+  FaSoundcloud,
   FaSpotify,
   FaTiktok,
   FaYoutube,
@@ -34,6 +35,7 @@ type Artist = {
   appleMusic?: string;
   youtube?: string;
   instagram?: string;
+  soundcloud?: string;
   tikTok?: string;
   officialWebsite?: string;
   liveVideo?: string;
@@ -45,14 +47,16 @@ const artists: Artist[] = [
     name: "Liv Del Estal",
     stage: "Scène Live",
     isLive: true,
+    portrait: "/images/artists/liv-del-estal-cover.jpeg",
     shortBio:
       "Liv del Estal façonne une musique électronique hybride, où la trance nostalgique croise l’acid techno corrosive et le breakbeat nerveux. Sa signature explore un territoire sonore sans frontière, fédérateur et cosmique, traversé par une mélancolie douce et persistante.",
     genre: "Électronique hybride / trance / acid techno / breakbeat",
   },
   {
     name: "A6el",
-    stage: "Scène DJ",
-    isLive: false,
+    stage: "Scène Live",
+    isLive: true,
+    portrait: "/images/artists/a6el-portrait.jpg",
     shortBio:
       "Jeune artiste de rap suisse originaire de Renens, A6el explore ses expériences personnelles avec des textes introspectifs et mélancoliques, en contraste avec des productions plus lumineuses. Son univers associe une identité visuelle soignée à une voix prometteuse du rap suisse.",
     origin: "Renens, Suisse",
@@ -64,6 +68,7 @@ const artists: Artist[] = [
     name: "Stela",
     stage: "Scène Live",
     isLive: true,
+    portrait: "/images/artists/stela-portrait.jpeg",
     shortBio:
       "Artiste émergent basé à Paris, Stela fusionne rap, électro house et UK garage. Après plusieurs années comme producteur, il passe aussi derrière le micro sur certains morceaux, tout en gardant une forte empreinte électronique.",
     origin: "Paris, France",
@@ -88,6 +93,7 @@ const artists: Artist[] = [
     name: "Mia Oud",
     stage: "Scène Live",
     isLive: true,
+    portrait: "/images/artists/mia-oud-portrait.jpg",
     shortBio:
       "Jeune musicienne valaisanne, Mia Oud apprend la batterie, puis la guitare et le chant. Après des débuts folk, elle évolue vers une neo soul portée par le groove et des voix enchanteresses, avec un nouvel univers inspiré par la jaspe rouge.",
     origin: "Valais, Suisse",
@@ -101,6 +107,7 @@ const artists: Artist[] = [
     name: "Halusk",
     stage: "Scène DJ",
     isLive: false,
+    portrait: "/images/artists/halusk-portrait.jpg",
     shortBio:
       "Artiste et promoteur émergent de Granada, Halusk emmène le public aux racines de la musique électronique. Ses sets mêlent techno, club urbain et latin, breaks et touches hip-hop dans une sélection pensée comme un voyage.",
     origin: "Granada, Espagne",
@@ -111,11 +118,13 @@ const artists: Artist[] = [
     name: "Yuri",
     stage: "Scène DJ",
     isLive: false,
+    portrait: "/images/artists/yuri-portrait.jpg",
     shortBio:
       "Chanteuse genevoise aux sonorités dark-folk, Yuri écrit en anglais autour de l’intime, de la nostalgie et du vide. Sa musique douce et mélancolique mêle guitare, superpositions de voix et textures électroniques.",
     origin: "Genève, Suisse",
     genre: "Dark-folk",
     instagram: "https://www.instagram.com/yuritsme/",
+    soundcloud: "https://soundcloud.com/yuritsme",
     liveVideo: "https://youtu.be/0RYvAcz96Dw",
   },
   { name: "Knut", stage: "Scène Live", isLive: true },
@@ -123,10 +132,14 @@ const artists: Artist[] = [
     name: "Burning House",
     stage: "Scène Live",
     isLive: true,
+    portrait: "/images/artists/burning-house-portrait.jpg",
     shortBio:
       "Collectif émergent de quatre jeunes DJs suisses, Burning House réunit production, rap et graphisme dans une ambiance underground singulière. Basé entre Zurich, Genève et Lausanne, le collectif mêle jungle, UK garage, DnB et musiques électroniques.",
     origin: "Zurich / Genève / Lausanne, Suisse",
     genre: "Jungle / UK garage / DnB / électronique",
+    spotify: "https://open.spotify.com/artist/3HFp9Xn6JcDJ2bLV5ypzOv?si=cFlLsBpLSx-Wz1DrpYM7Rw&nd=1&dlsi=0ccb9ab717c94039",
+    appleMusic: "https://music.apple.com/ch/artist/burning-house/1813114347?l=en-GB",
+    instagram: "https://www.instagram.com/burninghouse.crew/",
   },
   { name: "22Chopper", stage: "Scène DJ", isLive: false, origin: "Genève, Suisse" },
   { name: "Este", stage: "Scène Live", isLive: true },
@@ -139,6 +152,8 @@ const artists: Artist[] = [
       "DJ genevois, Semba mixe généralement en duo avec KOD mais se produira en solo à Orion. Inspiré par des mouvements musicaux du Brésil, du Nigeria, des USA et d’Haïti, il crée des sets variés à l’énergie contagieuse.",
     origin: "Genève, Suisse",
     genre: "DJ / sonorités brésiliennes, nigérianes, haïtiennes et club",
+    instagram: "https://www.instagram.com/luane.rsmss/",
+    soundcloud: "http://on.soundcloud.com/aTUq52rY2eyc1DRw6",
   },
   {
     name: "Funky McGee",
@@ -149,7 +164,11 @@ const artists: Artist[] = [
       "Producteur, songwriter et multi-instrumentiste genevois, Funky McGee naît d’une réinvention artistique en 2021. Après plusieurs projets solo, il développe une écriture pop aux couleurs organiques et électroniques, portée par une énergie de scène accessible et directe.",
     origin: "Genève, Suisse",
     genre: "Pop / production / multi-instrumentiste",
+    spotify: "https://open.spotify.com/artist/4s6YaQgwg48hJnu4yOcD1J?si=hSldZRm9RsuLY5iKS3wBXw",
+    appleMusic: "https://music.apple.com/ma/artist/funky-mcgee/1543699694",
+    youtube: "http://www.youtube.com/@funkymcgee",
     instagram: "https://www.instagram.com/funkymcgee/",
+    tikTok: "http://tiktok.com/@funkymcgee",
   },
 ];
 
@@ -195,6 +214,7 @@ const getArtistLinks = (artist: Artist) => {
   const links = [
     artist.spotify ? { label: "Spotify", href: artist.spotify, Icon: FaSpotify } : null,
     artist.appleMusic ? { label: "Apple Music", href: artist.appleMusic, Icon: FaApple } : null,
+    artist.soundcloud ? { label: "SoundCloud", href: artist.soundcloud, Icon: FaSoundcloud } : null,
     artist.youtube ? { label: "YouTube", href: artist.youtube, Icon: FaYoutube } : null,
     artist.instagram ? { label: "Instagram", href: artist.instagram, Icon: FaInstagram } : null,
     artist.tikTok ? { label: "TikTok", href: artist.tikTok, Icon: FaTiktok } : null,
