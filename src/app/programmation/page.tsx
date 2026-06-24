@@ -315,12 +315,12 @@ export default function ProgrammationPage() {
                       </p>
                     )}
                     {artist.shortBio && (
-                      <p className="mt-3 text-xs md:text-sm text-white/75 leading-relaxed">
+                      <p className="mt-3 text-sm md:text-base text-white/75 leading-relaxed">
                         {artist.shortBio}
                       </p>
                     )}
                     {artist.projectDescription && (
-                      <details className="mt-3 text-xs md:text-sm text-white/75 leading-relaxed">
+                      <details className="mt-3 text-sm md:text-base text-white/75 leading-relaxed">
                         <summary className="cursor-pointer font-heading font-black uppercase tracking-[0.18em] text-rose-orion">
                           En savoir plus
                         </summary>

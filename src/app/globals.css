@@ -31,7 +31,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.45;
+  opacity: 0.25;
   pointer-events: none;
   z-index: 1;
   background-image: url("/images/decorations/bg-rose-grain.png");
@@ -44,7 +44,7 @@ body {
    use screen so the pink grain stays visible. */
 .bg-bleu-orion.grain-overlay::after {
   mix-blend-mode: screen;
-  opacity: 0.55;
+  opacity: 0.35;
 }
 
 /* Cosmic blob decoration */
