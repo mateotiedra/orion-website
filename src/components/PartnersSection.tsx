@@ -11,7 +11,7 @@ type Partner = {
 const partners: Partner[] = [
   { src: "/images/logo-partners/Nos partenaires/Caverne de jouvence (pack 1).png", alt: "Caverne de Jouvence", w: 882, h: 290, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Comte (pack 1).jpg", alt: "Comte", w: 720, h: 776, pack: 1 },
-  { src: "/images/logo-partners/Nos partenaires/git (pack 1).png", alt: "git", w: 198, h: 153, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/GIT-IT (pack 1).png", alt: "GIT-IT", w: 1591, h: 1316, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Interiware (pack 1).png", alt: "Interiware", w: 886, h: 107, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Logo LD (pack 3).avif", alt: "Logo LD", w: 980, h: 343, pack: 3 },
   { src: "/images/logo-partners/Nos partenaires/Mobilière (pack 2).jpg", alt: "La Mobilière", w: 820, h: 160, pack: 1 },
