@@ -154,7 +154,6 @@ const artists: Artist[] = [
     genre: "DJ / sonorités brésiliennes, nigérianes, haïtiennes et club",
     instagram: "https://www.instagram.com/luane.rsmss/",
     soundcloud: "http://on.soundcloud.com/aTUq52rY2eyc1DRw6",
-    liveVideo: "/videos/artists/semba-meme-ta-maman.mp4",
   },
   {
     name: "Funky McGee",
