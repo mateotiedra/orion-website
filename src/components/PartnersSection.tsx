@@ -9,6 +9,8 @@ type Partner = {
 };
 
 const partners: Partner[] = [
+  { src: "/images/logo-partners/Nos partenaires/Architech (pack 1).png", alt: "Architech", w: 298, h: 71, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/Brands for Students (pack 1).png", alt: "Brands for Students", w: 359, h: 108, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Caverne de jouvence (pack 1).png", alt: "Caverne de Jouvence", w: 882, h: 290, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Comte (pack 1).jpg", alt: "Comte", w: 720, h: 776, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/GIT-IT (pack 1).png", alt: "GIT-IT", w: 1591, h: 1316, pack: 1 },
