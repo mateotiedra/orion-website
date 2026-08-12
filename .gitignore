@@ -43,3 +43,5 @@ next-env.d.ts
 
 # graphify
 /graphify-out/cache/
+
+# Graphify output — generated knowledge graph artifacts
