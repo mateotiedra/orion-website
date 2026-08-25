@@ -25,6 +25,7 @@ type Artist = {
   name: string;
   stage: string;
   isLive: boolean;
+  day: "vendredi" | "samedi";
   portrait?: string;
   livePhoto?: string;
   shortBio?: string;
@@ -47,6 +48,7 @@ const artists: Artist[] = [
     name: "Liv Del Estal",
     stage: "Scène Live",
     isLive: true,
+    day: "vendredi",
     portrait: "/images/artists/liv-del-estal-cover.jpeg",
     shortBio:
       "Liv del Estal façonne une musique électronique hybride, où la trance nostalgique croise l’acid techno corrosive et le breakbeat nerveux. Sa signature explore un territoire sonore sans frontière, fédérateur et cosmique, traversé par une mélancolie douce et persistante.",
@@ -56,6 +58,7 @@ const artists: Artist[] = [
     name: "A6el",
     stage: "Scène Live",
     isLive: true,
+    day: "samedi",
     portrait: "/images/artists/a6el-portrait.jpg",
     shortBio:
       "Jeune artiste de rap suisse originaire de Renens, A6el explore ses expériences personnelles avec des textes introspectifs et mélancoliques, en contraste avec des productions plus lumineuses. Son univers associe une identité visuelle soignée à une voix prometteuse du rap suisse.",
@@ -68,6 +71,7 @@ const artists: Artist[] = [
     name: "Stela",
     stage: "Scène Live",
     isLive: true,
+    day: "vendredi",
     portrait: "/images/artists/stela-portrait.jpeg",
     shortBio:
       "Artiste émergent basé à Paris, Stela fusionne rap, électro house et UK garage. Après plusieurs années comme producteur, il passe aussi derrière le micro sur certains morceaux, tout en gardant une forte empreinte électronique.",
@@ -80,6 +84,7 @@ const artists: Artist[] = [
     name: "Beka",
     stage: "Scène Live",
     isLive: true,
+    day: "samedi",
     portrait: "/images/artists/beka-presse-3.jpg",
     shortBio:
       "Rappeur franco-algérien installé à Lausanne et membre du collectif 247, Beka mélange RnB, hyperpop et électro pour parler d’ambition, de nostalgie et de relations amoureuses. Son style allie douceur, productions rythmées et mélancolie inspirée de son vécu.",
@@ -93,6 +98,7 @@ const artists: Artist[] = [
     name: "Mia Oud",
     stage: "Scène Live",
     isLive: true,
+    day: "samedi",
     portrait: "/images/artists/mia-oud-portrait.jpg",
     shortBio:
       "Jeune musicienne valaisanne, Mia Oud apprend la batterie, puis la guitare et le chant. Après des débuts folk, elle évolue vers une neo soul portée par le groove et des voix enchanteresses, avec un nouvel univers inspiré par la jaspe rouge.",
@@ -101,23 +107,25 @@ const artists: Artist[] = [
     projectDescription:
       "RED JASPER est un projet intense et vibrant inspiré de la jaspe rouge, autour de la résistance, de l’affirmation, de la surcharge émotionnelle, de la pression, de la libération et de la confiance.",
   },
-  { name: "Projet Wipeout", stage: "Scène Live", isLive: true },
-  { name: "Mucho", stage: "Scène DJ", isLive: false },
+  { name: "Projet Wipeout", stage: "Scène Live", isLive: true, day: "samedi" },
+  { name: "Mucho", stage: "Scène DJ", isLive: false, day: "samedi" },
   {
     name: "Halusk",
     stage: "Scène DJ",
     isLive: false,
+    day: "vendredi",
     portrait: "/images/artists/halusk-portrait.jpg",
     shortBio:
       "Artiste et promoteur émergent de Granada, Halusk emmène le public aux racines de la musique électronique. Ses sets mêlent techno, club urbain et latin, breaks et touches hip-hop dans une sélection pensée comme un voyage.",
     origin: "Granada, Espagne",
     genre: "Techno / urban club / latin club / breaks / hip-hop",
   },
-  { name: "Habiboo", stage: "Scène Live", isLive: true },
+  { name: "Habiboo", stage: "Scène Live", isLive: true, day: "samedi" },
   {
     name: "Yuri",
     stage: "Scène DJ",
     isLive: false,
+    day: "vendredi",
     portrait: "/images/artists/yuri-portrait.jpg",
     shortBio:
       "Chanteuse genevoise aux sonorités dark-folk, Yuri écrit en anglais autour de l’intime, de la nostalgie et du vide. Sa musique douce et mélancolique mêle guitare, superpositions de voix et textures électroniques.",
@@ -127,11 +135,12 @@ const artists: Artist[] = [
     soundcloud: "https://soundcloud.com/yuritsme",
     liveVideo: "https://youtu.be/0RYvAcz96Dw",
   },
-  { name: "Knut", stage: "Scène Live", isLive: true },
+  { name: "Knut", stage: "Scène Live", isLive: true, day: "vendredi" },
   {
     name: "Burning House",
     stage: "Scène Live",
     isLive: true,
+    day: "vendredi",
     portrait: "/images/artists/burning-house-portrait.jpg",
     shortBio:
       "Collectif émergent de quatre jeunes DJs suisses, Burning House réunit production, rap et graphisme dans une ambiance underground singulière. Basé entre Zurich, Genève et Lausanne, le collectif mêle jungle, UK garage, DnB et musiques électroniques.",
@@ -141,12 +150,13 @@ const artists: Artist[] = [
     appleMusic: "https://music.apple.com/ch/artist/burning-house/1813114347?l=en-GB",
     instagram: "https://www.instagram.com/burninghouse.crew/",
   },
-  { name: "22Chopper", stage: "Scène DJ", isLive: false, origin: "Genève, Suisse" },
-  { name: "Este", stage: "Scène Live", isLive: true },
+  { name: "22Chopper", stage: "Scène DJ", isLive: false, day: "vendredi", origin: "Genève, Suisse" },
+  { name: "Este", stage: "Scène Live", isLive: true, day: "samedi" },
   {
     name: "Semba",
     stage: "Scène DJ",
     isLive: false,
+    day: "samedi",
     portrait: "/images/artists/semba.jpg",
     shortBio:
       "DJ genevois, Semba mixe généralement en duo avec KOD mais se produira en solo à Orion. Inspiré par des mouvements musicaux du Brésil, du Nigeria, des USA et d’Haïti, il crée des sets variés à l’énergie contagieuse.",
@@ -159,6 +169,7 @@ const artists: Artist[] = [
     name: "Funky McGee",
     stage: "Scène Live",
     isLive: true,
+    day: "vendredi",
     portrait: "/images/artists/funky-mcgee.jpeg",
     shortBio:
       "Producteur, songwriter et multi-instrumentiste genevois, Funky McGee naît d’une réinvention artistique en 2021. Après plusieurs projets solo, il développe une écriture pop aux couleurs organiques et électroniques, portée par une énergie de scène accessible et directe.",
@@ -227,6 +238,11 @@ const getArtistLinks = (artist: Artist) => {
 };
 
 export default function ProgrammationPage() {
+  const days = [
+    { key: "vendredi", label: "Vendredi 18 sept" },
+    { key: "samedi", label: "Samedi 19 sept" },
+  ] as const;
+
   return (
     <>
       <Navbar />
@@ -270,83 +286,92 @@ export default function ProgrammationPage() {
         </div>
       </section>
 
-      {/* ============ ARTIST GRID — only visible after countdown ============ */}
+      {/* ============ ARTISTS BY DAY — only visible after countdown ============ */}
       <Countdown showTimer={false}>
         <section className="bg-bleu-orion py-12 md:py-20 px-4 md:px-6 grain-overlay">
-          <div className="max-w-7xl mx-auto relative z-20">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-              {artists.map((artist, i) => {
-                const links = getArtistLinks(artist);
+          <div className="max-w-7xl mx-auto relative z-20 space-y-20 md:space-y-28">
+            {days.map((day) => (
+              <section key={day.key}>
+                <h2 className="mb-10 md:mb-14 font-heading text-4xl md:text-6xl text-rose-orion uppercase tracking-[0.08em] font-black">
+                  {day.label}
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+                  {artists
+                    .filter((artist) => artist.day === day.key)
+                    .map((artist, i) => {
+                      const links = getArtistLinks(artist);
 
-                return (
-                  <div
-                    key={artist.name}
-                    className={`group ${offsets[i]} ${rotations[i]} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
-                  >
-                    <div className="aspect-[3/4] bg-gradient-to-br from-white/10 to-white/5 mb-3 md:mb-4 shadow-xl relative overflow-hidden">
-                      {artist.portrait ? (
-                        <Image
-                          src={artist.portrait}
-                          alt={artist.name}
-                          fill
-                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                          className="object-cover transition-all duration-700 group-hover:scale-105"
-                        />
-                      ) : (
-                        <span className="absolute inset-0 flex items-center justify-center text-white/15 font-heading text-xl md:text-2xl font-black uppercase text-center px-4">
-                          {artist.name}
-                        </span>
-                      )}
-                    </div>
-                    <span
-                      className={`text-[10px] md:text-xs font-heading font-black uppercase tracking-[0.2em] inline-block tilted-btn px-2 py-1 mb-1 md:mb-2 ${artist.isLive
-                        ? "text-rose-orion bg-white/10"
-                        : "text-white/60 bg-white/10"
-                        }`}
-                    >
-                      <span>{artist.stage}</span>
-                    </span>
-                    <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-black text-white uppercase leading-tight">
-                      {artist.name}
-                    </h2>
-                    {(artist.origin || artist.genre) && (
-                      <p className="mt-2 text-[10px] md:text-xs font-heading font-bold uppercase tracking-[0.18em] text-rose-orion/80 leading-relaxed">
-                        {[artist.origin, artist.genre].filter(Boolean).join(" · ")}
-                      </p>
-                    )}
-                    {artist.shortBio && (
-                      <p className="mt-3 text-sm md:text-base text-white/75 leading-relaxed">
-                        {artist.shortBio}
-                      </p>
-                    )}
-                    {artist.projectDescription && (
-                      <details className="mt-3 text-sm md:text-base text-white/75 leading-relaxed">
-                        <summary className="cursor-pointer font-heading font-black uppercase tracking-[0.18em] text-rose-orion">
-                          En savoir plus
-                        </summary>
-                        <p className="mt-2">{artist.projectDescription}</p>
-                      </details>
-                    )}
-                    {links.length > 0 && (
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {links.map(({ label, href, Icon }) => (
-                          <a
-                            key={label}
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`${artist.name} — ${label}`}
-                            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/75 transition-colors hover:bg-rose-orion hover:text-bleu-orion"
+                      return (
+                        <div
+                          key={artist.name}
+                          className={`group ${offsets[i]} ${rotations[i]} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
+                        >
+                          <div className="aspect-[3/4] bg-gradient-to-br from-white/10 to-white/5 mb-3 md:mb-4 shadow-xl relative overflow-hidden">
+                            {artist.portrait ? (
+                              <Image
+                                src={artist.portrait}
+                                alt={artist.name}
+                                fill
+                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                className="object-cover transition-all duration-700 group-hover:scale-105"
+                              />
+                            ) : (
+                              <span className="absolute inset-0 flex items-center justify-center text-white/15 font-heading text-xl md:text-2xl font-black uppercase text-center px-4">
+                                {artist.name}
+                              </span>
+                            )}
+                          </div>
+                          <span
+                            className={`text-[10px] md:text-xs font-heading font-black uppercase tracking-[0.2em] inline-block tilted-btn px-2 py-1 mb-1 md:mb-2 ${artist.isLive
+                              ? "text-rose-orion bg-white/10"
+                              : "text-white/60 bg-white/10"
+                              }`}
                           >
-                            <Icon aria-hidden="true" />
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+                            <span>{artist.stage}</span>
+                          </span>
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-heading font-black text-white uppercase leading-tight">
+                            {artist.name}
+                          </h3>
+                          {(artist.origin || artist.genre) && (
+                            <p className="mt-2 text-[10px] md:text-xs font-heading font-bold uppercase tracking-[0.18em] text-rose-orion/80 leading-relaxed">
+                              {[artist.origin, artist.genre].filter(Boolean).join(" · ")}
+                            </p>
+                          )}
+                          {artist.shortBio && (
+                            <p className="mt-3 text-sm md:text-base text-white/75 leading-relaxed">
+                              {artist.shortBio}
+                            </p>
+                          )}
+                          {artist.projectDescription && (
+                            <details className="mt-3 text-sm md:text-base text-white/75 leading-relaxed">
+                              <summary className="cursor-pointer font-heading font-black uppercase tracking-[0.18em] text-rose-orion">
+                                En savoir plus
+                              </summary>
+                              <p className="mt-2">{artist.projectDescription}</p>
+                            </details>
+                          )}
+                          {links.length > 0 && (
+                            <div className="mt-3 flex flex-wrap gap-2">
+                              {links.map(({ label, href, Icon }) => (
+                                <a
+                                  key={label}
+                                  href={href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${artist.name} — ${label}`}
+                                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/75 transition-colors hover:bg-rose-orion hover:text-bleu-orion"
+                                >
+                                  <Icon aria-hidden="true" />
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                </div>
+              </section>
+            ))}
           </div>
         </section>
       </Countdown>
