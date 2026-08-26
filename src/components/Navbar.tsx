@@ -38,7 +38,7 @@ export default function Navbar() {
             src={isSolid ? "/images/logo/logo-bleu-plein.svg" : "/images/logo/logo-blanc-plein.svg"}
             alt="Orion Festival"
             width={160}
-            height={40}
+            height={48}
             className="h-6 md:h-8 w-auto"
           />
         </Link>

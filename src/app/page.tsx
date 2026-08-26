@@ -79,7 +79,7 @@ export default function Home() {
             src="/images/logo/logo-blanc-plein.svg"
             alt="Orion Festival"
             width={600}
-            height={150}
+            height={178}
             className="w-[70%] md:w-[45%] lg:w-[35%] h-auto"
             priority
           />
@@ -136,13 +136,13 @@ export default function Home() {
               )}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 mb-6 md:mb-10">
-              {["Knut", "Burning House", "22Chopper", "Este", "Luane"].map(
+              {["Beka", "Mia Oud", "Knut", "Burning House", "22Chopper", "Este", "Semba", "Funky McGee"].map(
                 (name, i) => (
                   <span key={name} className="flex items-center gap-2 md:gap-3">
                     <span className="font-heading text-white text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
                       {name}
                     </span>
-                    {i < 4 && (
+                    {i < 7 && (
                       <span className="text-white/50 text-sm md:text-lg font-light">
                         &middot;
                       </span>
