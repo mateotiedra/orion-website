@@ -22,6 +22,23 @@ const partners: Partner[] = [
   { src: "/images/logo-partners/Nos partenaires/Systeo (pack 1).png", alt: "Systeo", w: 399, h: 110, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Techfirm (pack 1).png", alt: "Techfirm", w: 440, h: 110, pack: 1 },
   { src: "/images/logo-partners/Nos partenaires/Vision immo (pack 3).jpeg", alt: "Vision Immo", w: 364, h: 130, pack: 3 },
+  { src: "/images/logo-partners/Nos partenaires/lotterie-romande.png", alt: "Loterie Romande", w: 447, h: 447, pack: 3 },
+  { src: "/images/logo-partners/Nos partenaires/flyerline-schweiz-ag.jpeg", alt: "Flyerline Schweiz AG", w: 1600, h: 470, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/king-trone.png", alt: "King Trône", w: 717, h: 301, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/la-manivelle.png", alt: "La Manivelle", w: 1134, h: 851, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/la-renfile.png", alt: "La Renfile", w: 1982, h: 736, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/auberge-de-confignon.png", alt: "Auberge de Confignon", w: 7680, h: 3444, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/alloboissons.png", alt: "Alloboissons", w: 1080, h: 549, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/el-tony.png", alt: "El Tony", w: 1020, h: 1024, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/geneve-aeroport.png", alt: "Genève Aéroport", w: 1200, h: 555, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/ramada.png", alt: "Ramada", w: 7701, h: 1563, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/mp-electricite.webp", alt: "MP électricité", w: 156, h: 137, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/chevalley-transport-sa.png", alt: "Chevalley Transport SA", w: 1200, h: 800, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/geneve-terroir-swisswine.jpg", alt: "Genève Terroir / Swisswine", w: 1565, h: 843, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/my-garage-pro-plus.png", alt: "My Garage Pro+", w: 4022, h: 472, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/secra.png", alt: "SECRA", w: 842, h: 596, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/imprimerie-helvetica.png", alt: "Imprimerie Helvetica", w: 391, h: 135, pack: 1 },
+  { src: "/images/logo-partners/Nos partenaires/union-maraichere.png", alt: "Union maraîchère", w: 709, h: 473, pack: 1 },
 ];
 
 const supporters = [
