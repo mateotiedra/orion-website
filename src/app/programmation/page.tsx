@@ -13,6 +13,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Countdown from "@/components/Countdown";
 import CountdownTimer from "@/components/CountdownTimer";
+import ProgramTimeline from "@/components/ProgramTimeline";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -107,7 +108,7 @@ const artists: Artist[] = [
     projectDescription:
       "RED JASPER est un projet intense et vibrant inspiré de la jaspe rouge, autour de la résistance, de l’affirmation, de la surcharge émotionnelle, de la pression, de la libération et de la confiance.",
   },
-  { name: "Projet Wipeout", stage: "Scène Live", isLive: true, day: "samedi" },
+  { name: "Projet Wipeout", stage: "Scène Live", isLive: true, day: "vendredi" },
   { name: "Mucho", stage: "Scène DJ", isLive: false, day: "samedi" },
   {
     name: "Halusk",
@@ -125,7 +126,7 @@ const artists: Artist[] = [
     name: "Yuri",
     stage: "Scène DJ",
     isLive: false,
-    day: "vendredi",
+    day: "samedi",
     portrait: "/images/artists/yuri-portrait.jpg",
     shortBio:
       "Chanteuse genevoise aux sonorités dark-folk, Yuri écrit en anglais autour de l’intime, de la nostalgie et du vide. Sa musique douce et mélancolique mêle guitare, superpositions de voix et textures électroniques.",
@@ -286,6 +287,10 @@ export default function ProgrammationPage() {
         </div>
       </section>
 
+      <Countdown showTimer={false}>
+        <ProgramTimeline />
+      </Countdown>
+
       {/* ============ ARTISTS BY DAY — only visible after countdown ============ */}
       <Countdown showTimer={false}>
         <section className="bg-bleu-orion py-12 md:py-20 px-4 md:px-6 grain-overlay">
@@ -304,7 +309,13 @@ export default function ProgrammationPage() {
                       return (
                         <div
                           key={artist.name}
-                          className={`group ${offsets[i]} ${rotations[i]} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
+                          id={`artiste-${artist.name
+                            .normalize("NFD")
+                            .replace(/[\u0300-\u036f]/g, "")
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, "-")
+                            .replace(/(^-|-$)/g, "")}`}
+                          className={`group scroll-mt-28 ${offsets[i]} ${rotations[i]} transition-all duration-500 hover:rotate-0 hover:scale-[1.03]`}
                         >
                           <div className="aspect-[3/4] bg-gradient-to-br from-white/10 to-white/5 mb-3 md:mb-4 shadow-xl relative overflow-hidden">
                             {artist.portrait ? (
