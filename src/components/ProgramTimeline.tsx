@@ -27,7 +27,7 @@ const schedule: Record<DayKey, ScheduleSlot[]> = {
     { name: "Knut", start: "18:15", end: "19:15", stage: "club", artistAnchor: "knut" },
     { name: "Funky McGee", start: "19:15", end: "20:00", stage: "nova", artistAnchor: "funky-mcgee" },
     { name: "Burning House", start: "20:00", end: "21:00", stage: "club", artistAnchor: "burning-house" },
-    { name: "Al-Walid", start: "21:00", end: "21:45", stage: "nova" },
+    { name: "Al-Walid", start: "21:00", end: "21:45", stage: "nova", artistAnchor: "al-walid" },
     { name: "Halusk", start: "21:45", end: "22:45", stage: "club", artistAnchor: "halusk" },
     { name: "Liv Del Estal", start: "22:45", end: "23:45", stage: "nova", artistAnchor: "liv-del-estal" },
     { name: "Stela", start: "00:00", end: "01:00", stage: "nova", artistAnchor: "stela" },

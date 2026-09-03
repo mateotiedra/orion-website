@@ -100,6 +100,10 @@ export default function Home() {
               <span className="font-heading text-white text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
                 A6el
               </span>
+              <Image src="/images/logo/mono-blanc-etoile.svg" alt="" width={40} height={40} className="w-6 h-6 md:w-8 md:h-8 hidden md:block" aria-hidden="true" />
+              <span className="font-heading text-white text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tight">
+                Al-Walid
+              </span>
             </div>
 
             {/* Secondary */}
@@ -136,13 +140,13 @@ export default function Home() {
               )}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-3 mb-6 md:mb-10">
-              {["Beka", "Mia Oud", "Knut", "Burning House", "22Chopper", "Este", "Semba", "Funky McGee"].map(
+              {["Knut", "Burning House", "22Chopper", "Este", "Semba", "Funky McGee"].map(
                 (name, i) => (
                   <span key={name} className="flex items-center gap-2 md:gap-3">
                     <span className="font-heading text-white text-sm md:text-lg lg:text-2xl font-bold uppercase tracking-tight">
                       {name}
                     </span>
-                    {i < 7 && (
+                    {i < 5 && (
                       <span className="text-white/50 text-sm md:text-lg font-light">
                         &middot;
                       </span>
