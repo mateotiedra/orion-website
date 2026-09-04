@@ -46,7 +46,7 @@ const members: Member[] = [
   { name: "Nicolo Lopez", role: "Chef de secteur Technique et Sécurité", photo: "ORION - GENEVE - Quentin Pidoux00538.jpg" },
   { name: "Guillaume Udry", role: "Trésorier", photo: "ORION - GENEVE - Quentin Pidoux00548.jpg" },
   { name: "Alexandre Cavallero", role: "Chef de secteur F&B", photo: "ORION - GENEVE - Quentin Pidoux00569.jpg" },
-  { name: "Leo Lopez", role: "Chef de secteur Bénévole", photo: "ORION - GENEVE - Quentin Pidoux00577.jpg" },
+  { name: "Leo Lopez", role: "Chef de secteur Bénévoles et Programmation/Production", photo: "ORION - GENEVE - Quentin Pidoux00577.jpg" },
   { name: "Hicham Magnin", role: "Chef de secteur Programmation & Production", photo: "ORION - GENEVE - Quentin Pidoux00613.jpg" },
   { name: "Quentin Pidoux", role: "Directeur artistique", photo: "ORION - GENEVE - Quentin Pidoux00639.jpg" },
   { name: "Lucien Jeannet", role: "Co-chef de secteur Financement" },
